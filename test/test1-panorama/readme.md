@@ -20,7 +20,7 @@ demo:https://thinkia.github.io/threejs_/test/test1-panorama/cube_panorama.html<b
 way: cube_textures  -  cubetexturesloader()<br>
 code:https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/cube_mapping.html<br>
 demo: https://thinkia.github.io/threejs_/test/test1-panorama/cube_mapping.html   <br>
-blog:<br>
+blog: https://thinkia.github.io/threejs_/blog/2018-3/cube-textures.pdf<br>
 
 
 
