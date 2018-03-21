@@ -3,7 +3,7 @@
 3.19   单个全景实现 
 用的是css3d的方案<br>
 code: https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/index.html<br>
-demo:
+demo: https://thinkia.github.io/threejs_/test/test1-panorama/index.html
 
 
 
