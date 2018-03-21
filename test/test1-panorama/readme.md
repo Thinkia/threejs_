@@ -15,7 +15,7 @@ blog:  <br>
 3.21  采用正方体六面贴图方式实现全景<br>
 way: cube_textures<br>
 code:https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/cube_panorama.html<br>
-demo:<br>
+demo:https://thinkia.github.io/threejs_/test/test1-panorama/cube_panorama.html<br>
 blog:<br>
 
 
