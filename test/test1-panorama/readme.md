@@ -10,7 +10,7 @@ blog: http://www.cnblogs.com/Thinkia/p/8605483.html <br>
 way :  css3d<br>
 code:  https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/index2.html <br>
 demo:  https://thinkia.github.io/threejs_/test/test1-panorama/index2.html<br>
-blog:  <br>
+blog:  http://www.cnblogs.com/Thinkia/p/8612657.html<br>
 
 3.21  采用正方体六面贴图方式实现全景<br>
 way: cube_textures<br>
