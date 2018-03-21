@@ -4,7 +4,7 @@
 way  :css3d<br>
 code: https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/index.html<br>
 demo: https://thinkia.github.io/threejs_/test/test1-panorama/index.html <br>
-blog:                                                           <br>
+blog: http://www.cnblogs.com/Thinkia/p/8605483.html <br>
 
 3.20  a全景切换到b全景<br>
 way :  css3d<br>
