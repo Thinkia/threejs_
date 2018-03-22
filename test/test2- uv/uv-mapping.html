@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uv-mapping</title>
+    <script type="text/javascript" src="../../main/three.js"></script>
+
+    <script type="text/javascript" src="../../lib/js/libs/stats.min.js"></script>
+    <script type="text/javascript" src="../../lib/js/libs/dat.gui.js"></script>
+    <style>
+        body{
+            margin:0;
+            overflow: hidden;
+         }
+
+    </style>
+</head>
+<body>
+    <div id="Stats-output"></div>
+
+     <div id="WebGL-output"></div>
+    <script>
+        function init() {
+            var stats = initStats();
+
+            var scene = new THREE.Scene();
+
+            var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+            var webGlRenderer = new THREE.WebGLRenderer();
+
+            webGlRenderer.setClearColor(new THREE.Color(0xffffff, 1.0));
+
+            webGlRenderer.setSize(window.innerWidth, window.innerHeight);
+
+           // webGlRenderer.shadowMapEnabled = true;
+
+            camera.position.x = -30;
+            camera.position.y = 40;
+            camera.position.z = 50;
+            camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+            document.getElementById("WebGL-output").appendChild(webGlRenderer.domElement);
+
+            var texture = THREE.ImageUtils.loadTexture("./textures/ash_01.jpg");
+
+            var material = new THREE.MeshBasicMaterial({map: texture});
+
+            var geometry = new THREE.BoxGeometry(24, 24, 24);
+
+            var mesh = new THREE.Mesh(geometry, material);
+
+             mesh.rotation.z = 0.5 * Math.PI;
+            // mesh.rotation.y = 0.2 * Math.PI;
+           // mesh.rotation.x = 0.2 * Math.PI;
+
+            scene.add(mesh);
+
+            console.log(geometry.faceVertexUvs[0][0]);
+
+            console.log(geometry.faceVertexUvs[0][1]);
+
+            console.log(geometry.faceVertexUvs[0][2]);
+
+
+            var controls = new function () {
+                this.uv1 = geometry.faceVertexUvs[0][0][0].x;
+                this.uv2 = geometry.faceVertexUvs[0][0][0].y;
+                this.uv3 = geometry.faceVertexUvs[0][0][1].x;
+                this.uv4 = geometry.faceVertexUvs[0][0][1].y;
+                this.uv5 = geometry.faceVertexUvs[0][0][2].x;
+                this.uv6 = geometry.faceVertexUvs[0][0][2].y;
+
+
+            };
+
+            var gui = new dat.GUI();
+            gui.add(controls, 'uv1', 0, 1).onChange(function (e) {
+                geometry.faceVertexUvs[0][0][0].x = e;
+                geometry.uvsNeedUpdate = true;
+                console.log("uv1x:"+geometry.faceVertexUvs[0][0][0].x);
+                console.log("uv1y:"+geometry.faceVertexUvs[0][0][0].y);
+            });
+
+            gui.add(controls, 'uv2', 0, 1).onChange(function (e) {
+                geometry.faceVertexUvs[0][0][0].y = e;
+                geometry.uvsNeedUpdate = true;
+                console.log("uv2x:"+geometry.faceVertexUvs[0][0][0].x);
+                console.log("uv2y:"+geometry.faceVertexUvs[0][0][0].y);
+            });
+
+            gui.add(controls, 'uv3', 0, 1).onChange(function (e) {
+                geometry.faceVertexUvs[0][0][1].x = e;
+                geometry.uvsNeedUpdate = true;
+                console.log("uv3x:"+geometry.faceVertexUvs[0][0][1].x);
+                console.log("uv3y:"+geometry.faceVertexUvs[0][0][1].y);
+            });
+
+            gui.add(controls, 'uv4', 0, 1).onChange(function (e) {
+                geometry.faceVertexUvs[0][0][1].y = e;
+                geometry.uvsNeedUpdate = true;
+                console.log("uv4x:"+geometry.faceVertexUvs[0][0][1].x);
+                console.log("uv4y:"+geometry.faceVertexUvs[0][0][1].y);
+            });
+
+            gui.add(controls, 'uv5', 0, 1).onChange(function (e) {
+                geometry.faceVertexUvs[0][0][2].x = e;
+                geometry.uvsNeedUpdate = true;
+                console.log("uv5x:"+geometry.faceVertexUvs[0][0][2].x);
+                console.log("uv5y:"+geometry.faceVertexUvs[0][0][2].y);
+            });
+
+            gui.add(controls, 'uv6', 0, 1).onChange(function (e) {
+                geometry.faceVertexUvs[0][0][2].y = e;
+                geometry.uvsNeedUpdate = true;
+                console.log("uv6x:"+geometry.faceVertexUvs[0][0][2].x);
+                console.log("uv6y:"+geometry.faceVertexUvs[0][0][2].y);
+            });
+
+
+            render();
+
+            function render() {
+                stats.update();
+                if (mesh) {
+                       // mesh.rotation.y+=0.006;
+                }
+
+                requestAnimationFrame(render);
+                webGlRenderer.render(scene, camera);
+            }
+
+
+            function initStats() {
+                var stats = new Stats();
+                stats.setMode(0);    // 0:fps,  1:ms
+
+                stats.domElement.style.position = 'absolute';
+                stats.domElement.style.left = '0px';
+                stats.domElement.style.top = '0px';
+
+                document.getElementById("Stats-output").appendChild(stats.domElement);
+
+                return stats;
+
+            }
+        }
+        window.onload = init;
+
+    </script>
+
+
+</body>
+</html>

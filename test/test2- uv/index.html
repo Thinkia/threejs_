@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uv - test</title>
+</head>
+<body>
+
+<script src ="../../learning-threejs-master/libs/three.js" ></script>
+<script src ="../../learning-threejs-master/libs/OrbitControls.js"></script>
+
+<script >
+    // create renderer
+    var renderer = new THREE.WebGLRenderer({antialias:true});
+    // set color    60/s
+    renderer.setClearColor(new THREE.Color(0xff00ff,1.0));
+    // set  shadowMap
+    renderer.shadowMapEnabled = true;
+    //  webgl  element  2   body
+    document.body.appendChild(renderer.domElement);
+
+
+    // create scene
+    var scene = new THREE.Scene();
+
+    // create PerspectiveCamera
+    var camera = new THREE.PerspectiveCamera(50,window.innerWidth/window.innerHeight,0.1,10000);
+
+    // camera  position
+    camera.position.set(1000,1000,1000);
+
+    //  up -> y
+    camera.up.set(0,1,0);
+
+    // lookat  ->(0,0k0)
+    camera.lookAt({x:0,y:0,z:0});
+
+    // add camera
+
+    scene.add(camera);
+
+    // create  ambientLight
+  // var light1 = THREE.AmbientLight();
+
+    //light  position
+  //  light1.position.set(1000,1000,1000);
+
+    // add light1
+ //   scene.add(light1);
+
+    // create  cube geometry
+    var   cube = new THREE.BoxGeometry(600,600,600);
+
+    // MeshPhone  2   texture
+
+    var material = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('./textures/ash_01.jpg')});
+
+    var p1 = [
+        new THREE.Vector2(0,.666),
+        new THREE.Vector2(.5,.666),
+        new THREE.Vector2(.5,1),
+        new THREE.Vector2(0,1)
+
+    ];
+
+    var p2 = [
+         new THREE.Vector2(.5,.666),
+         new THREE.Vector2(1,.666),
+         new THREE.Vector2(1,1),
+         new THREE.Vector2(.5,1)
+    ];
+
+    var p3 = [
+        new THREE.Vector2(0,.333),
+        new THREE.Vector2(.5,.333),
+        new THREE.Vector2(.5,.666),
+        new THREE.Vector2(0,.666)
+
+    ];
+
+    var p4 = [
+        new THREE.Vector2(.5,.333),
+        new THREE.Vector2(1,.333),
+        new THREE.Vector2(.5,.333),
+        new THREE.Vector2(0,.333)
+    ];
+
+    var p5 = [
+        new THREE.Vector2(0,0),
+        new THREE.Vector2(.5,0),
+        new THREE.Vector2(.5,.333),
+        new THREE.Vector2(0,.333)
+    ];
+
+    var p6 = [
+        new THREE.Vector2(.5,0),
+        new THREE.Vector2(1,0),
+        new THREE.Vector2(1,.333),
+        new THREE.Vector2(.5,.333)
+    ];
+
+    //  cleaer uv
+
+    cube.faceVertexUvs[0]  = [];
+
+    // 2  triangle   ->  cube  6 plane
+
+    cube.faceVertexUvs[0][0]  = [p1[0],p1[1],p1[3]];
+    cube.faceVertexUvs[0][1]  = [p1[1],p2[2],p1[3]];
+
+    cube.faceVertexUvs[0][2]  = [p2[0],p2[1],p2[3]];
+    cube.faceVertexUvs[0][3]  = [p2[1],p2[2],p2[3]];
+
+    cube.faceVertexUvs[0][4] = [p3[0],p3[1],p3[3]];
+    cube.faceVertexUvs[0][5] = [p3[1],p3[2],p3[3]];
+
+    cube.faceVertexUvs[0][6] = [p4[0],p4[1],p4[3]];
+    cube.faceVertexUvs[0][7] = [p4[1],p4[2],p4[3]];
+
+    cube.faceVertexUvs[0][8] = [p5[0],p5[1],p5[3]];
+    cube.faceVertexUvs[0][9] = [p5[1],p5[2],p5[3]];
+
+    cube.faceVertexUvs[0][10] = [p6[0],p6[1],p6[3]];
+    cube.faceVertexUvs[0][11] = [p6[1],p6[2],p6[3]];
+
+    mesh=  new THREE.Mesh(cube,material);
+
+    scene.add(mesh);
+
+    var orbitCtl = new THREE.OrbitControls(camera);
+    orbitCtl.autoRotate = false ;
+
+    var clock = new THREE.Clock();
+
+    function threeStart()
+    {
+        var delta = clock.getDelta();
+        orbitCtl.update(delta);
+
+        renderer.clear();
+        renderer.render(scene,camera);
+        requestAnimationFrame(threeStart);
+    }
+
+    threeStart();
+</script>
+
+
+
+</body>
+</html>
