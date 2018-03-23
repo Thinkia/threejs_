@@ -25,7 +25,7 @@ blog: https://thinkia.github.io/threejs_/blog/2018-3/cube-textures.pdf<br>
 3.23  镜面全景<br>
 way: plane-panorama <br>
 code:https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/plane-panorama.html               <br>
-demo:
+demo:https://thinkia.github.io/threejs_/test/test1-panorama/plane-panorama.html   <br>
 blog:
 
 
