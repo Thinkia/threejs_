@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>uv - test</title>
-</head>
-<body>
 
-<script src ="../../learning-threejs-master/libs/three.js" ></script>
-<script src ="../../learning-threejs-master/libs/OrbitControls.js"></script>
+    <style>
+        body{
+            margin:0;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body >
+
+<script src ="../../main/three.js" ></script>
+<script src ="../../lib/js/controls/OrbitControls.js"></script>
 
 <script >
     // create renderer
@@ -15,10 +23,9 @@
     // set color    60/s
     renderer.setClearColor(new THREE.Color(0xff00ff,1.0));
     // set  shadowMap
-    renderer.shadowMapEnabled = true;
+   // renderer.shadowMapEnabled = true;
     //  webgl  element  2   body
     document.body.appendChild(renderer.domElement);
-
 
     // create scene
     var scene = new THREE.Scene();
@@ -53,7 +60,7 @@
 
     // MeshPhone  2   texture
 
-    var material = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('./textures/ash_01.jpg')});
+    var material = new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('./textures/ash_01.jpg')});
 
     var p1 = [
         new THREE.Vector2(0,.666),
