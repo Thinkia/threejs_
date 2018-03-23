@@ -4,7 +4,7 @@ code:https://github.com/Thinkia/threejs_/edit/master/test/test2-%20uv/index.html
 demo:https://thinkia.github.io/threejs_/test/test2-%20uv/index.html <br>
 
 way2: faceVertexUvs  顶点UV  <br>
-code:
+code:https://github.com/Thinkia/threejs_/blob/master/test/test2-%20uv/uv-mapping.html <br>
 demo:
 
 
