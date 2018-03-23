@@ -5,7 +5,10 @@ demo:https://thinkia.github.io/threejs_/test/test2-%20uv/index.html <br>
 
 way2: faceVertexUvs  顶点UV  <br>
 code:https://github.com/Thinkia/threejs_/blob/master/test/test2-%20uv/uv-mapping.html <br>
-demo:
+demo:https://thinkia.github.io/threejs_/test/test2-%20uv/uv-mapping.html   <br>
+
+blog:
+
 
 
 
