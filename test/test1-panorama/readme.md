@@ -22,5 +22,10 @@ code:https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/cube_ma
 demo: https://thinkia.github.io/threejs_/test/test1-panorama/cube_mapping.html   <br>
 blog: https://thinkia.github.io/threejs_/blog/2018-3/cube-textures.pdf<br>
 
+3.23  镜面全景<br>
+way: plane-panorama <br>
+code:               <br>
+demo:
+blog:
 
 
