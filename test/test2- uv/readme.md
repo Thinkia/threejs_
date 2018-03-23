@@ -7,7 +7,7 @@ way2: faceVertexUvs  顶点UV  <br>
 code:https://github.com/Thinkia/threejs_/blob/master/test/test2-%20uv/uv-mapping.html <br>
 demo:https://thinkia.github.io/threejs_/test/test2-%20uv/uv-mapping.html   <br>
 
-blog:
+blog:http://www.cnblogs.com/Thinkia/p/8629229.html
 
 
 
