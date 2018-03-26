@@ -32,6 +32,6 @@ blog:https://github.com/Thinkia/threejs_/blob/master/blog/2018-3/plane-panorama.
 way : canvas  <br>
 code: https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/canvas_panorama.html <br>
 demo: https://thinkia.github.io/threejs_/test/test1-panorama/canvas_panorama.html <br>
-blog:
+blog: https://github.com/Thinkia/threejs_/blob/master/blog/2018-3/3.26_canvas-panorama.docx <br>
 
 
