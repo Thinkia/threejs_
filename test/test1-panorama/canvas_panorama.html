@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas_renderer-panorama</title>
+    <style>
+        body{
+            background-color : rgba(200,200,200,1);
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+            <div id="container"></div>
+            <script src="../../main/three.js"></script>
+            <script src="../../lib/js/renderers/Projector.js"></script>
+            <script src="../../lib/js/renderers/CanvasRenderer.js"></script>
+
+            <script>
+
+                // camera,scene,renderer;
+
+                var camera,scene,renderer;
+                var texture_placeholder, isUserInteracting = false, onPointDownPointX = 0, onPointDownPointY = 0, lon = 90, onPointDownLon = 0, lat = 0, onPointDownLat = 0, phi =0, theta =0, target = new THREE.Vector3();
+
+                   init();
+                   animate();
+
+                   function init() {
+                       var container, mesh;
+                       container = document.getElementById('container');
+
+                       camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
+
+                       scene = new THREE.Scene();
+
+                       texture_placeholder = document.createElement('canvas');
+                       texture_placeholder.width = 128;
+                       texture_placeholder.height = 128;
+
+                       var context = texture_placeholder.getContext('2d');
+
+                       context.fillStyle = 'rgb(200,200,200)';
+                       context.fillRect(0, 0, texture_placeholder.width, texture_placeholder.height);
+
+                       // materials   textures
+
+                       var materials = [
+
+                           loadTexture('textures/posx.jpg'), //right
+                           loadTexture('textures/negx.jpg'), //left
+                           loadTexture('textures/posy.jpg'), //top
+                           loadTexture('textures/negy.jpg'), //bottom
+                           loadTexture('textures/posz.jpg'), //back
+                           loadTexture('textures/negz.jpg') //front
+
+                       ];
+
+                       var geometry = new THREE.BoxGeometry(300, 300, 300, 7, 7, 7);
+                       geometry.scale(-1, 1, 1);
+
+                       mesh = new THREE.Mesh(geometry, materials);
+
+                       scene.add(mesh);
+
+                       for (var i = 0, len = mesh.geometry.vertices.length; i < len; i++) {
+
+                           var vertex = mesh.geometry.vertices[i];
+                           vertex.normalize();
+                           vertex.multiplyScalar(550);
+                       }
+
+                       // CanvasRenderer()
+                       renderer = new THREE.CanvasRenderer();
+                       renderer.setPixelRatio(window.devicePixelRatio);
+
+                       renderer.setSize(window.innerWidth, window.innerHeight);
+
+                       container.appendChild(renderer.domElement);
+
+                       document.addEventListener('mousedown', onDocumentMouseDown, false);
+                       document.addEventListener('mousemove', onDocumentMouseMove, false);
+                       document.addEventListener('mouseup', onDocumentMouseUp, false);
+                       document.addEventListener('wheel', onDocumentMouseWheel, false);
+
+                       document.addEventListener('touchstart', onDocumentTouchStart, false);
+                       document.addEventListener('touchmove', onDocumentTouchMove, false);
+
+                       //
+                       window.addEventListener('resize', onWindowResize, false);
+
+
+                   }
+
+                    function onWindowResize(){
+
+                       camera.aspect = window.innerWidth/window.innerHeight;
+                       camera.updateProjectionMatrix();
+
+                       renderer.setSize(window.innerWidth,window.innerHeight);
+
+                    }
+
+                    function loadTexture(path) {
+
+                       var texture = new THREE.Texture(texture_placeholder);
+                       var material = new THREE.MeshBasicMaterial( {map: texture,overdraw:0.5});
+
+                       var image = new Image();
+                       image.onload = function(){
+
+                           texture.image = this;
+                           texture.needsUpdate = true;
+
+                       };
+
+                       image.src = path;
+
+                       return material;
+
+                    }
+
+                    // MounseDown
+                   function onDocumentMouseDown(event ){
+                       event.preventDefault();
+
+                       isUserInteracting = true;
+
+                       onPointerDownPointerX = event.clientX;
+                       onPointerDownPointerY = event.clientY;
+
+                       onpointerdownLon = lon;
+                       onPointerDownLat = lat;
+
+                   }
+
+
+                   //MounseMove
+                   function onDocumentMouseMove( event ){
+
+                       if(isUserInteracting === true){
+
+                           lon = (onPointerDownPointerX - event.clientX )*0.1 + onpointerdownLon;
+                           lat = (event.clientY - onPointerDownPointerY )*0.1 + onPointerDownLat;
+
+                       }
+
+                   }
+
+
+                   //MounseUp
+
+                    function onDocumentMouseUp( event ){
+
+                       isUserInteracting = false;
+
+                    }
+
+
+                    // MouseWheel
+
+                    function onDocumentMouseWheel ( event ){
+
+                       var fov = camera.fov + event.deltaY * 0.05;
+
+                       camera.fov = THREE.Math.clamp(fov,10,75);
+
+                       camera.updateProjectionMatrix();
+
+                    }
+
+
+                    //TouchStart
+
+                    function onDocumentTouchStart (event ){
+                       if(event.touches.length == 1){
+
+                           event.preventDefault();
+
+                           onPointerDownPointerX = event.touches[ 0 ].pageX;
+
+                           onPointerDownPointerY = event.touches[ 0 ].pageY;
+
+                           onPointerdownLon = lon;
+                           onPointerDownLat = lat;
+
+                       }
+
+                    }
+
+
+                    // TouchMove
+
+                    function onDocumentTouchMove( event){
+
+                       if( event.touches.length == 1){
+                            event.preventDefault();
+
+                            lon = (onPointerDownPointerX - event.touches[0].pageX )*0.1 + onPointerdownLon;
+                            lat = ( event.touches[0].pageY - onPointerDownPointerY )*0.1 + onPointerDownLat;
+
+                       }
+                    }
+
+                    //Animate
+
+                    function animate(){
+
+                       requestAnimationFrame( animate );
+                       update();
+
+                    }
+
+                    //Update
+
+                    function update(){
+                       if(isUserInteracting === false){
+
+                           lon += 0.1;
+                       }
+
+
+                    lat = Math.max(-85,Math.min(85,lat));
+                    phi = THREE.Math.degToRad (90 - lat );
+                    theta = THREE.Math.degToRad(lon);
+
+                    target.x = 500*Math.sin(phi)*Math.cos(theta);
+                    target.y = 500*Math.cos(phi);
+                    target.z = 500*Math.sin(phi) * Math.sin(theta);
+
+                    camera.position.copy(target).negate();
+                    camera.lookAt(target);
+
+                    renderer.render(scene,camera);
+
+                }
+
+
+
+            </script>
+
+</body>
+</html>
