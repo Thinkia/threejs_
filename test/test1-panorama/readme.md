@@ -30,7 +30,7 @@ blog:https://github.com/Thinkia/threejs_/blob/master/blog/2018-3/plane-panorama.
 
 3.26 球全景 <br>
 way : canvas  <br>
-code:
+code: https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/canvas_panorama.html <br>
 demo:
 blog:
 
