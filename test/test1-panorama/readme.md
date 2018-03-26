@@ -28,4 +28,10 @@ code:https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/plane-p
 demo:https://thinkia.github.io/threejs_/test/test1-panorama/plane-panorama.html   <br>
 blog:https://github.com/Thinkia/threejs_/blob/master/blog/2018-3/plane-panorama.pdf <br>
 
+3.26 球全景 <br>
+way : canvas  <br>
+code:
+demo:
+blog:
+
 
