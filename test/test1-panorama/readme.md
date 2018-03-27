@@ -35,3 +35,12 @@ demo: https://thinkia.github.io/threejs_/test/test1-panorama/canvas_panorama.htm
 blog: https://github.com/Thinkia/threejs_/blob/master/blog/2018-3/3.26_canvas-panorama.docx <br>
 
 
+3.27 全景中加载其他模型 <br>
+way:  <br>
+code: <br>
+demo: <br>
+blog: <br>
+
+
+
+
