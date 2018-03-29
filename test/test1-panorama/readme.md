@@ -38,7 +38,7 @@ blog: https://github.com/Thinkia/threejs_/blob/master/blog/2018-3/3.26_canvas-pa
 3.27 全景中加载其他模型 <br>
 way:  dynamic- envmap<br>
 code: https://github.com/Thinkia/threejs_/blob/master/test/test1-panorama/dynamic-envmap.html<br>
-demo: <br>
+demo: https://thinkia.github.io/threejs_/test/test1-panorama/dynamic-envmap.html<br>
 blog: <br>
 
 
