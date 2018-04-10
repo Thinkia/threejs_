@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加材质、光源和阴影效果</title>
+
+    <script type="text/javascript"  src="../../main/three.js"></script>
+    <script type="text/javascript"  src="../../lib/js/libs/stats.min.js"></script>
+    <script type="text/javascript"  src="../../lib/js/libs/dat.gui.js"></script>
+
+    <style>
+        body{
+            margin:0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+        <div id = "WebGL-output"></div>
+
+        <script >
+
+            function init(){
+
+                var scene,camera,renderer;
+
+                scene = new THREE.Scene();
+
+                camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,0.1,1000);
+
+                renderer = new THREE.WebGLRenderer();
+
+                renderer.setClearColor(new THREE.Color(0xEEEEEE,1.0)); // 颜色值  与透明度
+
+                renderer.setSize(window.innerWidth,window.innerHeight);
+
+                renderer.shadowMap.enabled = true;    //  shadowMapEnabled  --> shadowMap.enabled
+
+                var planeGeometry = new THREE.PlaneGeometry(60,20);
+                var planeMaterial = new THREE.MeshLambertMaterial({color:0xffffff});
+                var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+                plane.receiveShadow = true; // 接收阴影
+
+                var axes = new THREE.AxesHelper(20); // 长宽深为20的虚线坐标轴   右手坐标系
+                scene.add(axes);                    //场景中添加坐标轴
+
+                plane.rotation.x = -0.5 * Math.PI;
+                plane.position.x = 15;
+                plane.position.y = 0;
+                plane.position.z = 0;
+
+                scene.add(plane);
+
+                var cubeGeometry = new THREE.BoxGeometry(4,4,4);
+                var cubeMaterial = new THREE.MeshLambertMaterial({color:0xff0000, wireframe:true});// 红色 网格
+                var cube = new THREE.Mesh(cubeGeometry,cubeMaterial);
+                cube.castShadow = true;
+
+                cube.position.x = -4;
+                cube.position.y = 3;
+                cube.position.z = 0;
+
+                scene.add(cube);
+
+                var sphereGeometry = new THREE.SphereGeometry(4,20,20);
+                var sphereMaterial = new THREE.MeshLambertMaterial({color :0x7777ff });
+                var sphere = new THREE.Mesh(sphereGeometry,sphereMaterial);
+
+                sphere.position.x = 20;
+                sphere.position.y = 4;
+                sphere.position.z = 2;
+                sphere.castShadow = true;
+
+                scene.add(sphere);
+
+                camera.position.x = -30;
+                camera.position.y = 40;
+                camera.position.z = 30;
+                camera.lookAt(scene.position);
+
+                var spotLight = new THREE.SpotLight(0xffffff);
+                spotLight.position.set(-40,60,-10);  //光源位置
+                spotLight.castShadow = true;
+                scene.add(spotLight);
+
+                document.getElementById("WebGL-output").appendChild(renderer.domElement);
+
+                renderer.render(scene,camera);
+
+            }
+            window.onload = init;
+
+
+
+        </script>
+
+</body>
+</html>

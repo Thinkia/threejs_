@@ -27,7 +27,7 @@
 
             renderer = new THREE.WebGLRenderer();
            //renderer.setClearColorHex(0xEEEEEE);    已弃用
-            renderer.setSize(window.innerWidth,window.innerHeight);
+            renderer.setSize(window.innerWidth,window.innerHeight);// 场景的大小  这里采用的是屏幕的宽高
 
             var axes = new THREE.AxesHelper(20); // 长宽深为20的虚线坐标轴   右手坐标系
             scene.add(axes);                    //场景中添加坐标轴
