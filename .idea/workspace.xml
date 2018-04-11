@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Demo/FBX/animationmixer.html" afterPath="$PROJECT_DIR$/Demo/FBX/animationmixer.html" />
       <change beforePath="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
       <change beforePath="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
     </list>
@@ -42,8 +40,8 @@
       <file leaf-file-name="P18-1.7.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="-820">
+              <caret line="36" column="75" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,15 +50,15 @@
       <file leaf-file-name="P19-1.8.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="214">
+              <caret line="94" column="56" lean-forward="false" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="animationmixer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo/FBX/animationmixer.html">
+        <entry file="file://$PROJECT_DIR$/demo/FBX/animationmixer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
               <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
@@ -147,24 +145,6 @@
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="FBX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="FBX" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
               <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -207,26 +187,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.P18-1.7.html">
+  <component name="RunManager" selected="JavaScript Debug.P19-1.8.html">
     <configuration name="P10-1.5.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P10-1.5.html" />
     <configuration name="P14-1.6.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P14-1.6.html" />
     <configuration name="P18-1.7.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P18-1.7.html" />
+    <configuration name="P19-1.8.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P19-1.8.html" />
     <configuration name="dynamic-envmap.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test1-panorama/dynamic-envmap.html" />
-    <configuration name="plane-panorama.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test1-panorama/plane-panorama.html" />
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P10-1.5.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.plane-panorama.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.dynamic-envmap.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.dynamic-envmap.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P10-1.5.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.dynamic-envmap.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.plane-panorama.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P10-1.5.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.dynamic-envmap.html" />
       </list>
     </recent_temporary>
   </component>
@@ -245,12 +225,12 @@
       <updated>1523326933094</updated>
       <workItem from="1523326934544" duration="12586000" />
       <workItem from="1523408769322" duration="1199000" />
-      <workItem from="1523413245951" duration="11079000" />
+      <workItem from="1523413245951" duration="13906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24864000" />
+    <option name="totallyTimeSpent" value="27691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -402,7 +382,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/FBX/js/kicker.js">
+    <entry file="file://$PROJECT_DIR$/demo/FBX/js/kicker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="545" column="25" lean-forward="true" selection-start-line="545" selection-start-column="25" selection-end-line="545" selection-end-column="25" />
@@ -418,7 +398,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/FBX/animationmixer.html">
+    <entry file="file://$PROJECT_DIR$/demo/FBX/animationmixer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
@@ -428,16 +408,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="-820">
+          <caret line="36" column="75" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="214">
+          <caret line="94" column="56" lean-forward="false" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
           <folding />
         </state>
       </provider>
