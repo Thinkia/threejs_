@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
-      <change beforePath="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
+    <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
+      <change beforePath="" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,18 +22,28 @@
       <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="19">
               <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="P10-1.5.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="P10-1.5.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+            <state relative-caret-position="513">
+              <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="P69-4.1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -40,18 +52,28 @@
       <file leaf-file-name="P18-1.7.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-820">
-              <caret line="36" column="75" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="684">
+              <caret line="36" column="75" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="P19-1.8.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="P19-1.8.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="94" column="56" lean-forward="false" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+            <state relative-caret-position="1748">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="P22-1.9.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -70,7 +92,7 @@
       <file leaf-file-name="P14-1.6.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="855">
               <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
@@ -83,8 +105,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -97,12 +119,14 @@
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/readme.md" />
         <option value="$PROJECT_DIR$/josdirksen/readme.md" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html" />
-        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.css" />
         <option value="$PROJECT_DIR$/Demo/FBX/js/kicker.js" />
         <option value="$PROJECT_DIR$/Demo/FBX/animationmixer.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
+        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" />
+        <option value="$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html" />
+        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html" />
       </list>
     </option>
   </component>
@@ -113,8 +137,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="137" />
-    <option name="y" value="3" />
+    <option name="x" value="-109" />
+    <option name="y" value="12" />
     <option name="width" value="1458" />
     <option name="height" value="1025" />
   </component>
@@ -133,8 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,10 +175,23 @@
               <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
               <item name="chapter-01" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter-04" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.P19-1.8.html">
+  <component name="RunManager" selected="JavaScript Debug.P10-1.5.html">
     <configuration name="P10-1.5.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P10-1.5.html" />
     <configuration name="P14-1.6.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P14-1.6.html" />
     <configuration name="P18-1.7.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P18-1.7.html" />
@@ -202,9 +237,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P10-1.5.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P10-1.5.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
         <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
         <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.dynamic-envmap.html" />
       </list>
@@ -225,25 +260,26 @@
       <updated>1523326933094</updated>
       <workItem from="1523326934544" duration="12586000" />
       <workItem from="1523408769322" duration="1199000" />
-      <workItem from="1523413245951" duration="13906000" />
+      <workItem from="1523413245951" duration="20329000" />
+      <workItem from="1523445725485" duration="1207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27691000" />
+    <option name="totallyTimeSpent" value="35321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22339304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1670179" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.30663857" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15995647" sideWeight="0.28029504" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18389554" sideWeight="0.69336146" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17845485" sideWeight="0.7197049" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -266,6 +302,62 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="75" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/FBX/animationmixer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="69" column="35" lean-forward="true" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -316,7 +408,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="19">
           <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           <folding />
         </state>
@@ -350,27 +442,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.css" />
     <entry file="file://$PROJECT_DIR$/lib/js/libs/dat.gui.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -378,7 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -386,13 +461,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="545" column="25" lean-forward="true" selection-start-line="545" selection-start-column="25" selection-end-line="545" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="855">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
@@ -408,16 +482,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-820">
-          <caret line="36" column="75" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="684">
+          <caret line="36" column="75" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="94" column="56" lean-forward="false" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+        <state relative-caret-position="1748">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
           <folding />
         </state>
       </provider>
