@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Demo/FBX/animationmixer.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Demo/FBX/js/kicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/ammo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/dat.gui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/gunzip.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/inflate.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/jszip.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/mmdparser.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/msgpack-js.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/o3dgc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/opentype.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/system.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/timeliner_gui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/tween.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/loaders/FBXLoader.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/js/libs/stats.min.js" afterPath="$PROJECT_DIR$/lib/js/libs/stats.min.js" />
+      <change beforePath="$PROJECT_DIR$/Demo/FBX/animationmixer.html" afterPath="$PROJECT_DIR$/Demo/FBX/animationmixer.html" />
+      <change beforePath="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
+      <change beforePath="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,58 +42,28 @@
       <file leaf-file-name="P18-1.7.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="P19-1.8.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="P19-1.8.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animationmixer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="animationmixer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/FBX/animationmixer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
-              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FBXLoader.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/js/loaders/FBXLoader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dat.gui.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/js/libs/dat.gui.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kicker.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo/FBX/js/kicker.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10374">
-              <caret line="546" column="1" lean-forward="false" selection-start-line="546" selection-start-column="1" selection-end-line="546" selection-end-column="1" />
+              <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -144,11 +100,11 @@
         <option value="$PROJECT_DIR$/josdirksen/readme.md" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" />
-        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.css" />
-        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
         <option value="$PROJECT_DIR$/Demo/FBX/js/kicker.js" />
         <option value="$PROJECT_DIR$/Demo/FBX/animationmixer.html" />
+        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
+        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
       </list>
     </option>
   </component>
@@ -209,27 +165,13 @@
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="loaders" type="462c0819:PsiDirectoryNode" />
+              <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter-01" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -303,25 +245,25 @@
       <updated>1523326933094</updated>
       <workItem from="1523326934544" duration="12586000" />
       <workItem from="1523408769322" duration="1199000" />
-      <workItem from="1523413245951" duration="9044000" />
+      <workItem from="1523413245951" duration="11079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22829000" />
+    <option name="totallyTimeSpent" value="24864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11959958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22339304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.30663857" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34276387" sideWeight="0.69336146" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18389554" sideWeight="0.69336146" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -428,14 +370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -444,34 +378,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/FBX/js/kicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10374">
-          <caret line="546" column="1" lean-forward="false" selection-start-line="546" selection-start-column="1" selection-end-line="546" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -492,10 +402,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/FBX/js/kicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="545" column="25" lean-forward="true" selection-start-line="545" selection-start-column="25" selection-end-line="545" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/FBX/animationmixer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding />
         </state>
       </provider>
