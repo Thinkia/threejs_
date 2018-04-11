@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Demo/FBX/animationmixer.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Demo/FBX/js/kicker.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/ammo.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/dat.gui.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/gunzip.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/inflate.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/jszip.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/mmdparser.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/msgpack-js.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/o3dgc.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/opentype.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/system.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/timeliner_gui.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/tween.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/loaders/FBXLoader.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/lib/js/libs/stats.min.js" afterPath="$PROJECT_DIR$/lib/js/libs/stats.min.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +36,7 @@
       <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
+            <state relative-caret-position="0">
               <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               <folding />
             </state>
@@ -37,11 +53,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="P18-1.7.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="P18-1.7.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="121" column="41" lean-forward="true" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
+            <state relative-caret-position="475">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="P19-1.8.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="animationmixer.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Demo/FBX/animationmixer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FBXLoader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/js/loaders/FBXLoader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dat.gui.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/js/libs/dat.gui.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kicker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo/FBX/js/kicker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10374">
+              <caret line="546" column="1" lean-forward="false" selection-start-line="546" selection-start-column="1" selection-end-line="546" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -62,7 +128,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -77,6 +145,10 @@
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
+        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.css" />
+        <option value="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
+        <option value="$PROJECT_DIR$/Demo/FBX/js/kicker.js" />
+        <option value="$PROJECT_DIR$/Demo/FBX/animationmixer.html" />
       </list>
     </option>
   </component>
@@ -87,10 +159,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="706" />
-    <option name="y" value="85" />
-    <option name="width" value="1165" />
-    <option name="height" value="1047" />
+    <option name="x" value="137" />
+    <option name="y" value="3" />
+    <option name="width" value="1458" />
+    <option name="height" value="1025" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -119,13 +191,45 @@
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter-01" type="462c0819:PsiDirectoryNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="FBX" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="FBX" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="loaders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -136,11 +240,18 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/4-8/tmodel-p-web" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Apple/Desktop/4.9/threejs_/josdirksen/chapter-01/P10-1.5.html" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\loaders" />
+      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -192,12 +303,12 @@
       <updated>1523326933094</updated>
       <workItem from="1523326934544" duration="12586000" />
       <workItem from="1523408769322" duration="1199000" />
-      <workItem from="1523413245951" duration="6261000" />
+      <workItem from="1523413245951" duration="9044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20046000" />
+    <option name="totallyTimeSpent" value="22829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -210,7 +321,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10772579" sideWeight="0.69336146" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34276387" sideWeight="0.69336146" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -283,7 +394,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="0">
           <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
           <folding />
         </state>
@@ -335,8 +446,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="121" column="41" lean-forward="true" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
+        <state relative-caret-position="475">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/FBX/js/kicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10374">
+          <caret line="546" column="1" lean-forward="false" selection-start-line="546" selection-start-column="1" selection-end-line="546" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/libs/dat.gui.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/loaders/FBXLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/FBX/animationmixer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
           <folding />
         </state>
       </provider>
