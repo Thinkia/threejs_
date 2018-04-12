@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合测试练习</title>
+
+    <style>
+        body{
+            margin:0;
+            overflow:hidden;
+        }
+    </style>
+
+</head>
+<body>
+    <script type="text/javascript"  src="../main/three.js"></script>
+
+    <script type="text/javascript"  src="../lib/js/loaders/OBJLoader.js"></script>
+    <script type="text/javascript"  src="../lib/js/loaders/MTLLoader.js"></script>
+    <script type="text/javascript"  src="../lib/js/loaders/DDSLoader.js"></script>
+    <script type="text/javascript"  src="../lib/js/loaders/ColladaLoader.js"></script>
+
+    <script type="text/javascript"  src="../lib/js/controls/OrbitControls.js"></script>
+
+    <script type="text/javascript"  src="../lib/js/Detector.js"></script>
+    <script type="text/javascript"  src="../lib/js/libs/stats.min.js"></script>
+
+
+    <script>
+
+        var container;
+
+        var camera,scene,renderer;
+
+
+        var helper;
+
+        var mesh;
+
+        var mouse = new THREE.Vector2();
+        var raycaster = new THREE.Raycaster();
+
+        init();
+        animate();
+
+        function init(){
+
+            container = document.createElement('div');
+            document.body.appendChild( container );
+
+            camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,2000);
+
+           // camera.position.z = -50;
+          //  camera.position.y = -100;
+              camera.position.x =  -100;
+
+
+            scene = new THREE.Scene();
+
+            var ambientLight = new THREE.AmbientLight(0xcccccc,0.4);
+
+            scene.add(ambientLight);
+
+            var pointLight = new THREE.PointLight(0xffffff,0.8);
+
+            camera.add(pointLight);
+            scene.add(camera);
+
+            var onProgress = function (xhr){
+                if(xhr.lengthComputable){
+                    var percentComplete = xhr.loaded/xhr.total*100;
+                    console.log( Math.round(percentComplete,2)+'% downloaded');
+                }
+            };
+
+            var onError = function(xhr){ };
+
+            THREE.Loader.Handlers.add(/\.dds$/i,new THREE.DDSLoader());
+
+            var mtlLoader = new THREE.MTLLoader();
+            mtlLoader.setPath('src/floor3/');
+            mtlLoader.load('VT_Model.mtl',function (materials) {
+
+                materials.preload();
+
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);
+                objLoader.setPath('src/floor3/');
+                objLoader.load('VT_Model.obj', function (object) {
+
+
+                    object.position.y = 10;
+                    object.position.z = 0;
+
+
+                    object.rotation.y = - Math.PI;
+
+                    mesh = object;  // 获取obj对象 并保存
+
+                    scene.add(object);
+
+
+                }, onProgress, onError);
+
+            });
+
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth,window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            //helper
+
+            var gridHelper = new THREE.GridHelper(10,20);
+            scene.add(gridHelper);
+
+            //controls
+             var controls = new THREE.OrbitControls(camera,renderer.domElement);
+             controls.target.set(0,0,0);
+             controls.update();
+
+
+             // show axes in the screen
+            var axes = new THREE.AxesHelper(20);
+            scene.add(axes);
+
+            // mouseHelper
+
+            var geometry = new THREE.CubeGeometry(.1,.1,.1);
+
+            helper = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
+
+            scene.add(helper);
+
+            document.addEventListener('mousemove',onDocumentMouseMove,false);
+
+            window.addEventListener('resize',onWindowResize,false);
+
+        }
+
+            function  onWindowResize(){
+
+               // windowHalfX = window.innerWidth/2;
+
+               //  windowHalfY = window.innerHeight/2;
+
+                camera.aspect = window.innerWidth / window.innerHeight;
+
+                camera.updateProjectionMatrix();
+
+                renderer.setSize(window.innerWidth,window.innerHeight);
+
+            }
+
+
+            function onDocumentMouseMove (event ){
+
+             mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
+
+             mouse.y = -(event.clientY / renderer.domElement.clientHeight )*2+1;
+
+             console.log(mouse.x,mouse.y)//
+
+             raycaster.setFromCamera(mouse,camera);  // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
+
+             var intersects = raycaster.intersectObjects(mesh.children,true);//这里指的是房屋模型的所有对象
+
+               if(intersects.length>0){
+
+                   helper.position.set(intersects[0].point.x,intersects[0].point.y,intersects[0].point.z);//  intersects[0]  这里表示射线与房屋模型对象的第一个交点
+
+
+                   console.log(intersects[0]);
+
+                   console.log("射线与对象的交叉点数 length:"+intersects.length);
+
+                   console.log("射线源 向量：" + camera.position.x+','+camera.position.y+','+camera.position.z);
+
+
+                   console.log("在世界坐标中的第一个交叉点坐标："+intersects[0].point.x+','+intersects[0].point.y+','+intersects[0].point.z );
+
+                   console.log("射线源到第一个交点的距离:"+intersects[0].distance);
+
+                   console.log("第一个相交面："+intersects[0].face);
+
+                   console.log("相交面的索引："+intersects[0].faceIndex);
+
+                   console.log("组成相交面的顶点索引:" + intersects[0].indices);
+
+                   console.log("相交的对象:"+ intersects[0].object);
+
+
+               }
+
+
+            }
+
+
+            function animate(){
+
+                requestAnimationFrame(animate);
+                render();
+
+            }
+
+            function render(){
+
+                renderer.render(scene,camera);
+
+            }
+
+
+    </script>
+
+</body>
+</html>

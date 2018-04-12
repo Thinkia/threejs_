@@ -2,10 +2,225 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
-      <change beforePath="" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/general-test.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_001_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_001_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_001_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_001_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_001_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_001_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_002_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_002_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_002_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_002_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_002_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_002_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_003_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_003_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_003_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_003_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_003_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_003_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_004_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_004_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_004_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_004_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_004_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_004_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_005_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_005_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_005_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_005_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_005_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_005_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_006_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_006_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_006_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_006_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_006_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_006_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_007_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_007_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_007_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_007_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_007_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_007_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_008_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_008_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_008_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_008_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_008_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_008_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_009_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_009_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_009_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_009_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_009_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_009_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_010_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_010_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_010_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_010_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_010_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_010_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_011_1_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_011_2_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_011_3_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_011_4_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_011_5_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/1k/Pannorama_011_6_mob.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_003_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_003_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_003_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_003_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_003_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_003_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_004_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_004_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_004_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_004_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_004_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_004_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_005_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_005_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_005_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_005_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_005_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_005_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_006_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_006_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_006_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_006_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_006_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_006_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_007_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_007_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_007_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_007_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_007_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_007_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_008_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_008_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_008_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_008_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_008_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_008_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_009_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_009_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_009_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_009_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_009_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_009_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_010_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_010_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_010_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_010_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_010_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_010_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_011_1_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_011_2_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_011_3_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_011_4_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_011_5_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/2k/Pannorama_011_6_high.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_001_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_001_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_001_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_001_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_001_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_001_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_002_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_002_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_002_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_002_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_002_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_002_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_003_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_003_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_003_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_003_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_003_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_003_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_004_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_004_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_004_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_004_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_004_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_004_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_005_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_005_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_005_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_005_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_005_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_005_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_006_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_006_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_006_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_006_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_006_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_006_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_007_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_007_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_007_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_007_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_007_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_007_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_008_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_008_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_008_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_008_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_008_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_008_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_009_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_009_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_009_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_009_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_009_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_009_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_010_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_010_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_010_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_010_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_010_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_010_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_011_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_011_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_011_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_011_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_011_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/512/Pannorama_011_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/VT_Model_info.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model.mtl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model.obj" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0000_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0001_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0002_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0003_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0004_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0005_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0006_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0007_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0008_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0009_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/src/floor3/VT_Model_material0010_map_Kd.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/ImprovedNoise.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/loaders/ColladaLoader.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/loaders/DDSLoader.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/loaders/MTLLoader.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" />
+      <change beforePath="$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html" afterPath="$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,81 +234,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
+      <file leaf-file-name="general-test.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="P10-1.5.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="P69-4.1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="P18-1.7.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="36" column="75" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="P19-1.8.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1748">
-              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="P22-1.9.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="animationmixer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/FBX/animationmixer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="P14-1.6.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="463">
+              <caret line="192" column="19" lean-forward="false" selection-start-line="192" selection-start-column="19" selection-end-line="192" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -125,8 +270,9 @@
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html" />
-        <option value="$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html" />
         <option value="$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html" />
+        <option value="$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html" />
+        <option value="$PROJECT_DIR$/VT-Test/general-test.html" />
       </list>
     </option>
   </component>
@@ -136,11 +282,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-109" />
-    <option name="y" value="12" />
-    <option name="width" value="1458" />
-    <option name="height" value="1025" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -157,6 +303,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,37 +314,48 @@
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter-01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="josdirksen" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter-04" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="floor3" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/4-8/tmodel-p-web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../3月/three.js-master" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -206,7 +364,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\loaders" />
+      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\VT-Test\src" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
     </key>
   </component>
@@ -222,26 +382,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.P10-1.5.html">
+  <component name="RunManager" selected="JavaScript Debug.general-test.html">
     <configuration name="P10-1.5.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P10-1.5.html" />
     <configuration name="P14-1.6.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P14-1.6.html" />
     <configuration name="P18-1.7.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P18-1.7.html" />
     <configuration name="P19-1.8.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P19-1.8.html" />
-    <configuration name="dynamic-envmap.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test1-panorama/dynamic-envmap.html" />
+    <configuration name="general-test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/VT-Test/general-test.html" />
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P10-1.5.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.dynamic-envmap.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P10-1.5.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
         <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
         <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
         <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.dynamic-envmap.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.P10-1.5.html" />
       </list>
     </recent_temporary>
   </component>
@@ -261,25 +421,26 @@
       <workItem from="1523326934544" duration="12586000" />
       <workItem from="1523408769322" duration="1199000" />
       <workItem from="1523413245951" duration="20329000" />
-      <workItem from="1523445725485" duration="1207000" />
+      <workItem from="1523445725485" duration="2763000" />
+      <workItem from="1523494535901" duration="23181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35321000" />
+    <option name="totallyTimeSpent" value="60058000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1670179" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21601686" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15995647" sideWeight="0.28029504" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17845485" sideWeight="0.7197049" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17301415" sideWeight="0.7197049" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -302,6 +463,70 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="53" column="87" lean-forward="true" selection-start-line="53" selection-start-column="87" selection-end-line="53" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1786">
+          <caret line="94" column="54" lean-forward="true" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/FBX/animationmixer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -406,14 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test1-panorama/dynamic-envmap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -447,6 +664,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -464,42 +682,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/FBX/animationmixer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="75" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -514,8 +700,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        <state relative-caret-position="399">
+          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P18-1.7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="53" column="87" lean-forward="false" selection-start-line="53" selection-start-column="87" selection-end-line="53" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-04/P69-4.1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/src/VT_Model_info.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/src/floor3/VT_Model.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-665">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/src/floor3/VT_Model.mtl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/loaders/MTLLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/loaders/DDSLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/loaders/ColladaLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/ImprovedNoise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="192" column="19" lean-forward="false" selection-start-line="192" selection-start-column="19" selection-end-line="192" selection-end-column="19" />
           <folding />
         </state>
       </provider>
