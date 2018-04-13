@@ -25,20 +25,56 @@
     <script type="text/javascript"  src="../lib/js/Detector.js"></script>
     <script type="text/javascript"  src="../lib/js/libs/stats.min.js"></script>
 
+     <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
 
     <script>
 
+
+        var rayPoint = new Array();
+
+        $(function () {
+            $.ajax(
+                {
+                    type:"post",
+                    url:"src/VT_Model_info.json",
+                    dataType:"json",
+                    success:function(result){
+
+                        addBox(result);
+                    }
+                }
+
+            );
+        });
+        function addBox(result){
+            var i=0;
+            $.each(result,function(index,obj)
+                {
+                    i++;
+                    if(i==5) {
+                        for (var j = 0; j < obj[0].length; j++) {
+                            console.log(obj[0][j]['matrix'][3]+","+obj[0][j]['matrix'][7]+","+obj[0][j]['matrix'][11] )
+                            rayPoint[j]=new THREE.Vector3(obj[0][j]['matrix'][3],obj[0][j]['matrix'][7],obj[0][j]['matrix'][11]);//将json  4*4变换矩阵中3，7，11 坐标保存到 rayPoint数组
+                        }
+                    }
+                }
+            );
+        }
+
+
+
         var container;
-
         var camera,scene,renderer;
-
-
         var helper;
-
         var mesh;
 
         var mouse = new THREE.Vector2();
-        var raycaster = new THREE.Raycaster();
+        var raycaster = new THREE.Raycaster()
+
+        var   rayOrigin = new THREE.Vector3(0,0,0);    //  射线源点
+
+        var   rayDirection = new THREE.Vector3(0,0,1);   // 射线方向
 
         init();
         animate();
@@ -52,7 +88,7 @@
 
            // camera.position.z = -50;
           //  camera.position.y = -100;
-              camera.position.x =  -100;
+              camera.position.set(0.838,-6.69,-5.91);
 
 
             scene = new THREE.Scene();
@@ -89,13 +125,13 @@
                 objLoader.load('VT_Model.obj', function (object) {
 
 
-                    object.position.y = 10;
-                    object.position.z = 0;
+                   // object.position.y = 5;
+                    //object.position.z = 20;
 
 
-                    object.rotation.y = - Math.PI;
+                  //  object.rotation.y = - Math.PI;
 
-                    mesh = object;  // 获取obj对象 并保存
+                    mesh = object;  // 获取obj 对象 并保存
 
                     scene.add(object);
 
@@ -129,13 +165,48 @@
 
             var geometry = new THREE.CubeGeometry(.1,.1,.1);
 
-            helper = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
 
-            scene.add(helper);
+
+          //  helper = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
+
+            helper = new Array();
+
+            for(var i=0;i<8;i++)
+            {
+                helper[i]=  new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
+                helper[i].position.set(rayPoint.x,rayPoint.y,rayPoint.z);
+                scene.add(helper[i]);
+            }
+
 
             document.addEventListener('mousemove',onDocumentMouseMove,false);
 
             window.addEventListener('resize',onWindowResize,false);
+
+
+            document.onmouseup = function () {
+
+
+                for(var i=0;i<8;i++) {
+
+
+                    raycaster.set(rayPoint[i], rayDirection);     //设置射线源点  与方向
+
+                    var intersects = raycaster.intersectObjects(mesh.children, true);
+
+                    var num=0;
+                    if (intersects.length > 0) {
+
+                        num++;
+                        helper[i].position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);//  intersects[0]  这里表示射线与房屋模型对象的第一个交点
+                    }
+
+                    console.log(num);
+
+                }
+
+                console.log("camera(x,y,z):"+camera.position.x+","+camera.position.y+","+camera.position.z);
+
 
         }
 
@@ -154,13 +225,26 @@
             }
 
 
+
+
             function onDocumentMouseMove (event ){
+
+                //  [-1,1]
 
              mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
 
              mouse.y = -(event.clientY / renderer.domElement.clientHeight )*2+1;
 
-             console.log(mouse.x,mouse.y)//
+
+
+                 //   console.log(rayPoint[i]);
+
+                   // console.log(helper[i]);
+
+             }
+
+            /*
+             console.log(mouse.x,mouse.y)
 
              raycaster.setFromCamera(mouse,camera);  // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
 
@@ -177,7 +261,6 @@
 
                    console.log("射线源 向量：" + camera.position.x+','+camera.position.y+','+camera.position.z);
 
-
                    console.log("在世界坐标中的第一个交叉点坐标："+intersects[0].point.x+','+intersects[0].point.y+','+intersects[0].point.z );
 
                    console.log("射线源到第一个交点的距离:"+intersects[0].distance);
@@ -188,12 +271,13 @@
 
                    console.log("组成相交面的顶点索引:" + intersects[0].indices);
 
+
                    console.log("相交的对象:"+ intersects[0].object);
 
 
+
                }
-
-
+                    */
             }
 
 

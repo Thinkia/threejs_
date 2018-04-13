@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+
+        $(function () {
+            $.ajax(
+                {
+                    type:"post",
+                    url:"src/VT_Model_info.json",
+                    dataType:"json",
+                    success:function(result){
+
+                        addBox(result);
+                    }
+                }
+
+            );
+        });
+
+        function addBox(result){
+            var i=0;
+            $.each(result,function(index,obj)
+                {
+                    i++;
+                    if(i==5) {
+                        for (var j = 0; j < obj[0].length; j++) {
+                            console.log(obj[0][j]['matrix'][3]+","+obj[0][j]['matrix'][7]+","+obj[0][j]['matrix'][11] );
+                        }
+                    }
+                }
+            );
+        }
+    </script>
+
+</head>
+<body id="box">
+
+</body>
+</html>
