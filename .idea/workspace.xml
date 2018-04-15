@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
-      <change beforePath="" afterPath="$PROJECT_DIR$/VT-Test/ajax_test.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/tweenjs-NEXT.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/tweenjs.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/VT-Test/general-test.html" afterPath="$PROJECT_DIR$/VT-Test/general-test.html" />
     </list>
@@ -21,8 +22,28 @@
       <file leaf-file-name="general-test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="90" column="51" lean-forward="false" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+            <state relative-caret-position="-196">
+              <caret line="223" column="60" lean-forward="true" selection-start-line="223" selection-start-column="60" selection-end-line="223" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tweenjs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/js/libs/tweenjs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-228">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tweenjs-NEXT.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/js/libs/tweenjs-NEXT.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -31,8 +52,8 @@
       <file leaf-file-name="ajax_test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="190">
+              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -88,8 +109,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-99" />
-    <option name="y" value="498" />
+    <option name="x" value="-274" />
+    <option name="y" value="142" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -108,13 +129,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
@@ -132,6 +170,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,10 +185,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\loaders" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\VT-Test\src" />
-      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -206,12 +245,13 @@
       <workItem from="1523445725485" duration="2763000" />
       <workItem from="1523494535901" duration="26024000" />
       <workItem from="1523582308531" duration="10893000" />
-      <workItem from="1523602659854" duration="3136000" />
+      <workItem from="1523602659854" duration="9040000" />
+      <workItem from="1523790789926" duration="3909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76930000" />
+    <option name="totallyTimeSpent" value="86743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -224,7 +264,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.132753" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26985854" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -268,14 +308,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VT-Test/src/VT_Model_info.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -608,16 +640,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="190">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/libs/tweenjs-NEXT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/libs/tweenjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="90" column="51" lean-forward="false" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+        <state relative-caret-position="-196">
+          <caret line="223" column="60" lean-forward="true" selection-start-line="223" selection-start-column="60" selection-end-line="223" selection-end-column="60" />
           <folding />
         </state>
       </provider>

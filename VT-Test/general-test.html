@@ -25,7 +25,9 @@
     <script type="text/javascript"  src="../lib/js/Detector.js"></script>
     <script type="text/javascript"  src="../lib/js/libs/stats.min.js"></script>
 
-     <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="text/javascript"  src="../lib/js/libs/tween.min.js"></script>
 
 
     <script>
@@ -67,12 +69,17 @@
         var container;
         var camera,scene,renderer;
         var helper;
+        var helperSphere;
         var mesh;
+        var controls;
+
+        var targetX=0,targetY=0,targetZ=0;
+
 
         var mouse = new THREE.Vector2();
         var raycaster = new THREE.Raycaster()
 
-        var   rayOrigin = new THREE.Vector3(0,0,0);    //  射线源点
+       // var   rayOrigin = new THREE.Vector3(0,0,0);    //  射线源点
 
         var   rayDirection = new THREE.Vector3(0,0,1);   // 射线方向
 
@@ -88,7 +95,7 @@
 
            // camera.position.z = -50;
           //  camera.position.y = -100;
-              camera.position.set(0.838,-6.69,-5.91);
+              camera.position.set(2.33,-18.66,-16.48);  //  相机初始位置
 
 
             scene = new THREE.Scene();
@@ -151,10 +158,9 @@
             var gridHelper = new THREE.GridHelper(10,20);
             scene.add(gridHelper);
 
-            //controls
-             var controls = new THREE.OrbitControls(camera,renderer.domElement);
-             controls.target.set(0,0,0);
-             controls.update();
+            //controls                                                                              相机
+             controls = new THREE.OrbitControls(camera,renderer.domElement);
+             controls.target.set(targetX,targetY,targetZ);
 
 
              // show axes in the screen
@@ -163,9 +169,16 @@
 
             // mouseHelper
 
+            helperSphere =  new THREE.Mesh(new THREE.SphereGeometry(.05,20,20),new THREE.MeshNormalMaterial());
+
+            scene.add(helperSphere);
+
+            document.addEventListener('mousemove',onDocumentMouseMove,false);
+
+            window.addEventListener('resize',onWindowResize,false);
+
+
             var geometry = new THREE.CubeGeometry(.1,.1,.1);
-
-
 
           //  helper = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
 
@@ -178,37 +191,73 @@
                 scene.add(helper[i]);
             }
 
-
-            document.addEventListener('mousemove',onDocumentMouseMove,false);
-
-            window.addEventListener('resize',onWindowResize,false);
-
-
             document.onmouseup = function () {
 
 
                 for(var i=0;i<8;i++) {
 
-
                     raycaster.set(rayPoint[i], rayDirection);     //设置射线源点  与方向
 
                     var intersects = raycaster.intersectObjects(mesh.children, true);
 
-                    var num=0;
+
                     if (intersects.length > 0) {
 
-                        num++;
+
                         helper[i].position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);//  intersects[0]  这里表示射线与房屋模型对象的第一个交点
                     }
 
-                    console.log(num);
+                }
+
+                mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
+
+                mouse.y = -(event.clientY / renderer.domElement.clientHeight )*2+1;
+
+                raycaster.setFromCamera(mouse,camera);  // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
+
+                var intersects = raycaster.intersectObjects(mesh.children,true);//这里指的是房屋模型的所有对象
+
+                if(intersects.length>0) {
+
+                    var  x  =  camera.position.x;
+                    var  y  =  camera.position.y;
+                    var  z  =  camera.position.z;   //原相机坐标;
+
+                    var  x1 =  intersects[0].point.x
+
+                    var  y1 =  intersects[0].point.y;
+
+                    var  z1 =  intersects[0].point.z;  //  射线与模型第一个交点坐标;   intersects[0]  这里表示射线与房屋模型对象的第一个交点
+
+                    var  x2 =  x+(x1-x)*3/5;
+                    var  y2 =  y+(y1-y)*3/5;
+                    var  z2 =  z+(z1-z)*3/5;
+
+                    //camera.position.set(x2,y2,z2);         //  新相机位置
+
+                    //camera.lookAt(x1,y1,z1);   //  相机朝向 交点;
+
+                    targetX = x1;
+                    targetY = y1;
+                    targetZ = z1;
+
+                    controls.update();
+
+
+                    new TWEEN.Tween(camera.position).to({
+                        x:x2,
+                        y:y2,
+                        z:z2
+                    },2000).easing(TWEEN.Easing.Elastic.Out).start();
+
+
 
                 }
 
-                console.log("camera(x,y,z):"+camera.position.x+","+camera.position.y+","+camera.position.z);
+            }
 
 
-        }
+
 
             function  onWindowResize(){
 
@@ -225,22 +274,30 @@
             }
 
 
-
-
             function onDocumentMouseMove (event ){
 
                 //  [-1,1]
 
-             mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
+                console.log("camera.posiont xyz:"+camera.position.x+","+camera.position.y+","+camera.position.z);
 
-             mouse.y = -(event.clientY / renderer.domElement.clientHeight )*2+1;
+                console.log("control.target xyz:"+targetX+","+targetY+","+targetZ);
 
+                mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
 
+                mouse.y = -(event.clientY / renderer.domElement.clientHeight )*2+1;
 
-                 //   console.log(rayPoint[i]);
+                raycaster.setFromCamera(mouse,camera);  // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
 
-                   // console.log(helper[i]);
+                var intersects = raycaster.intersectObjects(mesh.children,true);//这里指的是房屋模型的所有对象
 
+                if(intersects.length>0) {
+
+                    helperSphere.position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);//  intersects[0]  这里表示射线与房屋模型对象的第一个交点
+
+                }
+
+                        //   console.log(rayPoint[i]);
+                        // console.log(helper[i]);
              }
 
             /*
@@ -290,6 +347,7 @@
 
             function render(){
 
+               TWEEN.update();
                 renderer.render(scene,camera);
 
             }
