@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/tweenjs-NEXT.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/libs/tweenjs.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/js/TypedArrayUtils.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/VT-Test/general-test.html" afterPath="$PROJECT_DIR$/VT-Test/general-test.html" />
     </list>
@@ -22,8 +21,38 @@
       <file leaf-file-name="general-test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-196">
-              <caret line="223" column="60" lean-forward="true" selection-start-line="223" selection-start-column="60" selection-end-line="223" selection-end-column="60" />
+            <state relative-caret-position="526">
+              <caret line="283" column="38" lean-forward="true" selection-start-line="283" selection-start-column="38" selection-end-line="283" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TypedArrayUtils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/js/TypedArrayUtils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="179" column="3" lean-forward="true" selection-start-line="179" selection-start-column="3" selection-end-line="179" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="canvas_panorama.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test1-panorama/canvas_panorama.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrbitControls.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/js/controls/OrbitControls.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-868">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -32,7 +61,7 @@
       <file leaf-file-name="tweenjs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/js/libs/tweenjs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -43,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/lib/js/libs/tweenjs-NEXT.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
-              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+              <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -52,7 +81,7 @@
       <file leaf-file-name="ajax_test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="19">
               <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
               <folding />
             </state>
@@ -62,8 +91,8 @@
       <file leaf-file-name="VT_Model_info.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VT-Test/src/VT_Model_info.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+            <state relative-caret-position="361">
+              <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -150,13 +179,6 @@
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
               <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -180,13 +202,13 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Apple/Desktop/4.9/threejs_/josdirksen/chapter-01/P10-1.5.html" />
+    <property name="SearchEverywhereHistoryKey" value="camera&#9;null&#9;null" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js" />
+      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\loaders" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\VT-Test\src" />
     </key>
@@ -246,16 +268,16 @@
       <workItem from="1523494535901" duration="26024000" />
       <workItem from="1523582308531" duration="10893000" />
       <workItem from="1523602659854" duration="9040000" />
-      <workItem from="1523790789926" duration="3909000" />
+      <workItem from="1523790789926" duration="4780000" />
+      <workItem from="1523840307531" duration="24298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86743000" />
+    <option name="totallyTimeSpent" value="111912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -264,7 +286,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26985854" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26985854" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -308,30 +330,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/VT-Test/src/VT_Model_info.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="23" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -630,42 +628,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VT-Test/src/VT_Model_info.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/libs/tweenjs-NEXT.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/libs/tweenjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/controls/OrbitControls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-868">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test1-panorama/canvas_panorama.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/src/VT_Model_info.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/TypedArrayUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="179" column="3" lean-forward="true" selection-start-line="179" selection-start-column="3" selection-end-line="179" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
-          <caret line="223" column="60" lean-forward="true" selection-start-line="223" selection-start-column="60" selection-end-line="223" selection-end-column="60" />
+        <state relative-caret-position="526">
+          <caret line="283" column="38" lean-forward="true" selection-start-line="283" selection-start-column="38" selection-end-line="283" selection-end-column="38" />
           <folding />
         </state>
       </provider>
