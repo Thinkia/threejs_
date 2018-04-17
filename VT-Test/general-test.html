@@ -34,7 +34,15 @@
     <script>
 
 
-        var rayPoint = new Array();
+        var rayPoint = new Array();                                                                                     //     射线源
+
+        var positions = new Float32Array(8*3);                                                                          //     8个三维坐标
+        var kdtree ;                                                                                                    //   KD-Tree
+
+        //构造三维对象
+        var lookAt = new  THREE.Vector3();
+
+        var lookatx=0,lookaty=0,lookatz=0;
 
         $(function () {
             $.ajax(
@@ -50,6 +58,7 @@
 
             );
         });
+                                                                                                                             // ajax  提取  json 数据函数   ---   jq
         function addBox(result){
             var i=0;
             console.log("射线源：");
@@ -58,8 +67,22 @@
                     i++;
                     if(i==5) {
                         for (var j = 0; j < obj[0].length; j++) {
-                            console.log(obj[0][j]['matrix'][3]+","+obj[0][j]['matrix'][7]+","+obj[0][j]['matrix'][11] )
-                            rayPoint[j]=new THREE.Vector3(obj[0][j]['matrix'][3],obj[0][j]['matrix'][7],obj[0][j]['matrix'][11]);//将json  4*4变换矩阵中3，7，11 坐标保存到 rayPoint数组
+                           // console.log("初始:"+obj[0][j]['matrix'][3]+","+obj[0][j]['matrix'][7]+","+obj[0][j]['matrix'][11] );
+                            rayPoint[j]=new THREE.Vector3(obj[0][j]['matrix'][3],obj[0][j]['matrix'][7],obj[0][j]['matrix'][11]);               //将json  4*4变换矩阵中3，7，11 坐标保存到 rayPoint数组
+
+                            rayPoint[j].applyAxisAngle(new THREE.Vector3(1,0,0),Math.PI/2);                                                     // applyAxisAngle() 实现 绕（1，0，0）向量    旋转  pi/2
+
+                           // console.log("变换后:"+rayPoint[j].x+","+rayPoint[j].y+","+rayPoint[j].z);
+                            /*           实现了相机自传            未实现 相机绕x轴转
+                            //console.log(rayPoint[j]+"----"+j);
+                            var cube = new THREE.PerspectiveCamera();
+                            cube.position.set( rayPoint[j].x,rayPoint[j].y,rayPoint[j].z );
+                            console.log(cube.position);
+                            cube.applyAxisAngle(new THREE.Vector3(1,0,0),Math.PI/2);
+                            console.log("旋转后："+cube.position.x+","+cube.position.y+","+cube.position.z);
+                                */
+
+
                         }
                     }
                 }
@@ -83,7 +106,7 @@
 
        // var   rayOrigin = new THREE.Vector3(0,0,0);    //  射线源点
 
-        var   rayDirection = new THREE.Vector3(0,0,1);   // 射线方向              xy面法向量
+        var   rayDirection = new THREE.Vector3(0,-1,0);   // 射线方向              xy面法向量
 
         init();
         animate();
@@ -101,9 +124,10 @@
             // camera.position.z = -50;
           //  camera.position.y = -100;
 
-            camera.position.set(2.33,-18.66,-16.48);  //  相机初始位置
+            camera.position.set(1.916,6.143,17.256);                                                                    //  相机初始位置
 
-            camera1.position.set(2.33,-18.66,-16.48);  //  过渡相机初始位置
+            camera1.position.set(1.916,6.143,17.256);                                                                   //  过渡相机初始位置
+
 
 
             scene = new THREE.Scene();
@@ -137,13 +161,12 @@
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('src/floor3/');
-                objLoader.load('VT_Model.obj', function (object) {
+                objLoader.load('VT_Model.obj', function (object) {                                                     //模型
 
                     mesh = object;  // 获取obj 对象 并保存
 
+                    mesh.rotation.x = Math.PI / 2;                                                                       //模型绕x轴旋转  pi/2
                     scene.add(object);
-
-
                 }, onProgress, onError);
 
             });
@@ -157,9 +180,9 @@
             //helper
 
             var gridHelper = new THREE.GridHelper(10,20);
-            scene.add(gridHelper);
+           // scene.add(gridHelper);                                                                                     //地面辅助工具
 
-            //controls                                                                              相机
+            //controls                                                                                                     控制相机
              controls = new THREE.OrbitControls(camera,renderer.domElement);
 
              controls.target.set(targetX,targetY,targetZ);
@@ -168,13 +191,13 @@
 
              // show axes in the screen
             var axes = new THREE.AxesHelper(20);
-            scene.add(axes);
+           // scene.add(axes);                                                                                                  //辅助线
 
             // mouseHelper
 
             helperSphere =  new THREE.Mesh(new THREE.SphereGeometry(.05,20,20),new THREE.MeshNormalMaterial());
 
-            scene.add(helperSphere);
+            scene.add(helperSphere);                                                                                            //辅助小球
 
             document.addEventListener('mousemove',onDocumentMouseMove,false);
 
@@ -187,19 +210,27 @@
 
             helper = new Array();
 
-            for(var i=0;i<8;i++)
+            for(var i=0;i<8;i++)                                                                                        // 场景添加辅助小立方体
             {
                 helper[i]=  new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
                 helper[i].position.set(rayPoint.x,rayPoint.y,rayPoint.z);
                 scene.add(helper[i]);
             }
 
-            document.onmouseup = function () {
+            var distanceFunction = function ( a, b ) {
+                return Math.pow( a[ 0 ] - b [0 ], 2 ) +  Math.pow( a[ 1 ] - b[ 1 ], 2 ) +  Math.pow( a[ 2 ] - b[ 2 ], 2 );          //   求两点距离平方 函数
+            };
+
+
+
+
+
+            document.onmouseup = function () {                                                                          // 鼠标点击事件  mouseup
 
 
                 for(var i=0;i<8;i++) {
 
-                    raycaster.set(rayPoint[i], rayDirection);     //设置射线源点  与方向
+                    raycaster.set(rayPoint[i], rayDirection);                                                            //设置射线源点  与方向         射线在地面的投影
 
                   //  console.log("射线在地面的投影:");
 
@@ -207,52 +238,62 @@
 
 
                     if (intersects.length > 0) {
-
-
-                        helper[i].position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);//  intersects[0]  这里表示射线与房屋模型对象的第一个交点
+                        helper[i].position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);     //  intersects[0]  这里表示射线与房屋模型对象的第一个交点
                     //    console.log(helper[i].position.x+","+helper[i].position.y+","+helper[i].position.z);
+
+                        positions[i*3+0] = intersects[0].point.x;
+                        positions[i*3+1] = intersects[0].point.y;
+                        positions[i*3+2] = intersects[0].point.z;                                                       //  将8个投影点 存放在 positions 数组里;
 
                     }
 
                 }
 
+                kdtree  = new THREE.TypedArrayUtils.Kdtree(positions,distanceFunction,3);                                 // KD-Tree
+
+                console.log(positions);
+                console.log(kdtree);
+
                 mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
 
                 mouse.y = -(event.clientY / renderer.domElement.clientHeight )*2+1;
 
-                raycaster.setFromCamera(mouse,camera1);  // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
+                raycaster.setFromCamera(mouse,camera1);                                                                 // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
 
-                var intersects = raycaster.intersectObjects(mesh.children,true);//这里指的是房屋模型的所有对象
+                var intersects = raycaster.intersectObjects(mesh.children,true);                                        //这里指的是房屋模型的所有对象
 
                 if(intersects.length>0) {
 
                     var  x  =  camera1.position.x;
                     var  y  =  camera1.position.y;
-                    var  z  =  camera1.position.z;   //原相机坐标;
+                    var  z  =  camera1.position.z;                                                                      //原相机坐标;
 
                     var  x1 =  intersects[0].point.x
 
                     var  y1 =  intersects[0].point.y;
 
-                    var  z1 =  intersects[0].point.z;  //  射线与模型第一个交点坐标;   intersects[0]  这里表示射线与房屋模型对象的第一个交点
+                    var  z1 =  intersects[0].point.z;                                                                   //  射线与模型第一个交点坐标;   intersects[0]  这里表示射线与房屋模型对象的第一个交点
 
                     var  x2 =  x+(x1-x)*90/100;
                     var  y2 =  y+(y1-y)*90/100;
                     var  z2 =  z+(z1-z)*90/100;
 
 
+                    var nearestPoint = kdtree.nearest([x1,y1,z1],1,20);                                                 //  最临近点
+
+                    console.log(nearestPoint[0][0]['obj'][0]+','+nearestPoint[0][0]['obj'][1]+','+nearestPoint[0][0]['obj'][2]);                     //   kdtree -- nearest
 
 
-                    //var theta   =  Math.acos(z1-z);
-
-
+                    var xm =  nearestPoint[0][0]['obj'][0] ;
+                    var ym =  nearestPoint[0][0]['obj'][1] ;
+                    var zm =  nearestPoint[0][0]['obj'][2] ;
 
 
                     new TWEEN.Tween(camera1.position).to({
-                        x:x2,
-                        y:y2,
-                        z:z2
-                    },2000).easing(TWEEN.Easing.Quadratic.InOut).start();  //  http://sole.github.io/tween.js/examples/03_graphs.html
+                        x:xm,
+                        y:ym+0.5,
+                        z:zm
+                    },2000).easing(TWEEN.Easing.Quadratic.InOut).start();                                                 //  http://sole.github.io/tween.js/examples/03_graphs.html
 
 
                     //camera.lookAt(x1,y1,z1);   //  相机朝向 交点;
@@ -267,27 +308,38 @@
                         z:z1
                     },1000).easing(TWEEN.Easing.Quadratic.InOut).start();
 
-                    console.log(camera1);
+                   // console.log(camera1);
 
-                    var lookAt = new  THREE.Vector3();
-                    lookAt.x = 0;
-                    lookAt.y = 0;
-                    lookAt.z = 0;
+                                                                                                                         //                 loookAt
+                    lookAt.x = lookatx;
+                    lookAt.y = lookaty;
+                    lookAt.z = lookatz;
+
+                    //console.log("初始相机位置:"+camera1.position.x)
+                  //  console.log("初始lookAt:"+lookAt.x);
+                    //console.log("目标位置:"+)
 
 
-
-                    console.log(lookAt);
-
-                    new TWEEN.Tween(lookAt).to({
+                    new TWEEN.Tween(lookAt)
+                        .to({
                         x:x1,
-                        y:y1,
-                        z:z1+(z1-z)/10
-                    }).update(function (lookAt) {
-                        camera1.lookAt(lookAt);
-                    });
+                        y:y1+0.5,
+                        z:z1
+                    },2000)
+                        .easing(TWEEN.Easing.Quadratic.InOut)
+                        .onUpdate(function () {
+                        //console.log(lookAt);
+                       // console.log("相机位置"+camera1.position.x+","+camera1.position.y+","+camera1.position.z);           //相机朝向            回调函数
+                        camera1.lookAt(lookAt.x,lookAt.y,lookAt.z);
+                        lookatx = lookAt.x;
+                        lookaty = lookAt.y;
+                        lookatz = lookAt.z;
+                            // console.log(lookatx);
+                       // console.log(z1);
+                       })
+                        .start();
 
-
-                    console.log(lookAt);
+                    // console.log(lookatx);
 
                 }
 
