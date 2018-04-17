@@ -39,10 +39,14 @@
         var positions = new Float32Array(8*3);                                                                          //     8个三维坐标
         var kdtree ;                                                                                                    //   KD-Tree
 
+
         //构造三维对象
         var lookAt = new  THREE.Vector3();
 
         var lookatx=0,lookaty=0,lookatz=0;
+
+        var xchange=0,zchange=0;
+
 
         $(function () {
             $.ajax(
@@ -118,7 +122,7 @@
 
             camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,2000);
 
-            camera1 = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,2000);  //过渡相机
+            camera1 = new THREE.PerspectiveCamera(50,window.innerWidth/window.innerHeight,1,2000);  //过渡相机
 
 
             // camera.position.z = -50;
@@ -222,6 +226,18 @@
             };
 
 
+            document.onmousedown = function (ev) {
+
+                console.log("当前相机位置:"+camera1.position.x+','+camera1.position.y+','+camera1.position.z);
+                console.log("当前朝向lookat"+lookatx+','+lookaty+','+lookatz);
+
+             //   console.log("lookatx:"+lookatx);
+
+          //      console.log("xchange:"+xchange);
+
+
+
+            }
 
 
 
@@ -232,10 +248,12 @@
 
                     raycaster.set(rayPoint[i], rayDirection);                                                            //设置射线源点  与方向         射线在地面的投影
 
+
                   //  console.log("射线在地面的投影:");
 
                     var intersects = raycaster.intersectObjects(mesh.children, true);
 
+                 //  console.log(intersects[0]['distance']);                                                              // distance
 
                     if (intersects.length > 0) {
                         helper[i].position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);     //  intersects[0]  这里表示射线与房屋模型对象的第一个交点
@@ -251,8 +269,8 @@
 
                 kdtree  = new THREE.TypedArrayUtils.Kdtree(positions,distanceFunction,3);                                 // KD-Tree
 
-                console.log(positions);
-                console.log(kdtree);
+              //  console.log(positions);
+               // console.log(kdtree);
 
                 mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
 
@@ -268,46 +286,62 @@
                     var  y  =  camera1.position.y;
                     var  z  =  camera1.position.z;                                                                      //原相机坐标;
 
-                    var  x1 =  intersects[0].point.x
-
+                    var  x1 =  intersects[0].point.x;
                     var  y1 =  intersects[0].point.y;
-
                     var  z1 =  intersects[0].point.z;                                                                   //  射线与模型第一个交点坐标;   intersects[0]  这里表示射线与房屋模型对象的第一个交点
-
-                    var  x2 =  x+(x1-x)*90/100;
-                    var  y2 =  y+(y1-y)*90/100;
-                    var  z2 =  z+(z1-z)*90/100;
 
 
                     var nearestPoint = kdtree.nearest([x1,y1,z1],1,20);                                                 //  最临近点
 
-                    console.log(nearestPoint[0][0]['obj'][0]+','+nearestPoint[0][0]['obj'][1]+','+nearestPoint[0][0]['obj'][2]);                     //   kdtree -- nearest
+                    console.log('最近投影点：'+nearestPoint[0][0]['obj'][0]+','+nearestPoint[0][0]['obj'][1]+','+nearestPoint[0][0]['obj'][2]);             //   kdtree -- nearest
+
 
 
                     var xm =  nearestPoint[0][0]['obj'][0] ;
                     var ym =  nearestPoint[0][0]['obj'][1] ;
                     var zm =  nearestPoint[0][0]['obj'][2] ;
 
+                    //console.log(ym);
 
+
+                     xchange =  (xm - x);
+                     zchange  =  (zm - z);
+
+                   // console.log(xchange+'---'+zchange);
+
+                    new TWEEN.Tween(camera1.position).to(                                                               // Tween  camera1.position
+                        {
+                            x:xm,
+                            y:ym+0.5,
+                            z:zm
+                        },2000)
+                        .easing(TWEEN.Easing.Quadratic.InOut)
+                        .onUpdate(function () {
+
+                            //console.log(xchange+','+zchange);
+                        })
+                        .start();
+
+                    /*     交点
                     new TWEEN.Tween(camera1.position).to({
-                        x:xm,
-                        y:ym+0.5,
-                        z:zm
+                        x:x2,
+                        y:y2,
+                        z:z2
                     },2000).easing(TWEEN.Easing.Quadratic.InOut).start();                                                 //  http://sole.github.io/tween.js/examples/03_graphs.html
-
+                    */
 
                     //camera.lookAt(x1,y1,z1);   //  相机朝向 交点;
 
                    // console.log("相机朝向 向量（xyz):"+camera.getWorldDirection().x+","+camera.getWorldDirection().y+","+camera.getWorldDirection().z);
 
 
-
+/*
                     new TWEEN.Tween(controls.target).to({
                         x:0,
                         y:0,
                         z:z1
                     },1000).easing(TWEEN.Easing.Quadratic.InOut).start();
-
+*/
                    // console.log(camera1);
 
                                                                                                                          //                 loookAt
@@ -320,22 +354,22 @@
                     //console.log("目标位置:"+)
 
 
-                    new TWEEN.Tween(lookAt)
+                    new TWEEN.Tween(lookAt)                                                                             // Tween    lookAt
                         .to({
-                        x:x1,
-                        y:y1+0.5,
-                        z:z1
+                        x:x1+xchange,
+                        y:ym+0.8,
+                        z:z1+zchange
                     },2000)
                         .easing(TWEEN.Easing.Quadratic.InOut)
                         .onUpdate(function () {
                         //console.log(lookAt);
-                       // console.log("相机位置"+camera1.position.x+","+camera1.position.y+","+camera1.position.z);           //相机朝向            回调函数
+                        //console.log("相机位置"+camera1.position.x+","+camera1.position.y+","+camera1.position.z);           //相机朝向            回调函数
                         camera1.lookAt(lookAt.x,lookAt.y,lookAt.z);
                         lookatx = lookAt.x;
                         lookaty = lookAt.y;
                         lookatz = lookAt.z;
-                            // console.log(lookatx);
-                       // console.log(z1);
+                         //    console.log(lookaty);
+                       // console.log(y1);
                        })
                         .start();
 

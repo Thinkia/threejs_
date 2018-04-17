@@ -20,8 +20,8 @@
       <file leaf-file-name="general-test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="315" column="38" lean-forward="false" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
+            <state relative-caret-position="586">
+              <caret line="311" column="146" lean-forward="false" selection-start-line="311" selection-start-column="146" selection-end-line="311" selection-end-column="146" />
               <folding />
             </state>
           </provider>
@@ -90,7 +90,7 @@
       <file leaf-file-name="VT_Model_info.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VT-Test/src/VT_Model_info.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="988">
               <caret line="58" column="21" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
               <folding />
             </state>
@@ -269,16 +269,15 @@
       <workItem from="1523602659854" duration="9040000" />
       <workItem from="1523790789926" duration="4780000" />
       <workItem from="1523840307531" duration="24639000" />
-      <workItem from="1523925958183" duration="17752000" />
+      <workItem from="1523925958183" duration="29383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130005000" />
+    <option name="totallyTimeSpent" value="141636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-27" y="15" width="1936" height="1059" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -287,7 +286,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26898047" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26898047" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -679,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VT-Test/src/VT_Model_info.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="988">
           <caret line="58" column="21" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
           <folding />
         </state>
@@ -687,8 +686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="315" column="38" lean-forward="false" selection-start-line="315" selection-start-column="38" selection-end-line="315" selection-end-column="38" />
+        <state relative-caret-position="586">
+          <caret line="311" column="146" lean-forward="false" selection-start-line="311" selection-start-column="146" selection-end-line="311" selection-end-column="146" />
           <folding />
         </state>
       </provider>
