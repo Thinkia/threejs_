@@ -40,6 +40,8 @@
         var kdtree ;                                                                                                    //   KD-Tree
 
 
+        var isMove=false;
+
         //构造三维对象
         var lookAt = new  THREE.Vector3();
 
@@ -55,11 +57,9 @@
                     url:"src/VT_Model_info.json",
                     dataType:"json",
                     success:function(result){
-
                         addBox(result);
                     }
                 }
-
             );
         });
                                                                                                                              // ajax  提取  json 数据函数   ---   jq
@@ -120,18 +120,17 @@
             container = document.createElement('div');
             document.body.appendChild( container );
 
-            camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,2000);
+            camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,0.01,2000);
 
-            camera1 = new THREE.PerspectiveCamera(50,window.innerWidth/window.innerHeight,1,2000);  //过渡相机
+         //   camera1 = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,2000);  //过渡相机
 
 
             // camera.position.z = -50;
-          //  camera.position.y = -100;
+            //  camera.position.y = -100;
 
             camera.position.set(1.916,6.143,17.256);                                                                    //  相机初始位置
 
-            camera1.position.set(1.916,6.143,17.256);                                                                   //  过渡相机初始位置
-
+           // camera1.position.set(1.916,6.143,17.256);                                                                   //  过渡相机初始位置
 
 
             scene = new THREE.Scene();
@@ -184,18 +183,21 @@
             //helper
 
             var gridHelper = new THREE.GridHelper(10,20);
-           // scene.add(gridHelper);                                                                                     //地面辅助工具
+            //scene.add(gridHelper);                                                                                      //地面辅助工具
 
             //controls                                                                                                     控制相机
              controls = new THREE.OrbitControls(camera,renderer.domElement);
 
-             controls.target.set(targetX,targetY,targetZ);
+            // controls.dampingFactor = false;
 
-             camera1.lookAt(0,0,0);                     // 过渡相机  初始朝向
+             //controls.target.set(targetX,targetY,targetZ);                                                            //   controls.target
+
+
+            // camera1.lookAt(0,0,0);                     // 过渡相机  初始朝向
 
              // show axes in the screen
             var axes = new THREE.AxesHelper(20);
-           // scene.add(axes);                                                                                                  //辅助线
+           // scene.add(axes);                                                                                                  //辅助坐标系
 
             // mouseHelper
 
@@ -226,16 +228,14 @@
             };
 
 
-            document.onmousedown = function (ev) {
+            document.onmousedown = function () {
 
-                console.log("当前相机位置:"+camera1.position.x+','+camera1.position.y+','+camera1.position.z);
-                console.log("当前朝向lookat"+lookatx+','+lookaty+','+lookatz);
+               // console.log("当前相机位置:"+camera1.position.x+','+camera1.position.y+','+camera1.position.z);
+              //  console.log("当前朝向lookat"+lookatx+','+lookaty+','+lookatz);
 
              //   console.log("lookatx:"+lookatx);
-
-          //      console.log("xchange:"+xchange);
-
-
+                isMove =false;
+                                                 //      console.log("xchange:"+xchange);
 
             }
 
@@ -243,6 +243,8 @@
 
             document.onmouseup = function () {                                                                          // 鼠标点击事件  mouseup
 
+
+              //  console.log(controls.target);
 
                 for(var i=0;i<8;i++) {
 
@@ -276,20 +278,22 @@
 
                 mouse.y = -(event.clientY / renderer.domElement.clientHeight )*2+1;
 
-                raycaster.setFromCamera(mouse,camera1);                                                                 // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
+                raycaster.setFromCamera(mouse,camera);                                                                 // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
 
                 var intersects = raycaster.intersectObjects(mesh.children,true);                                        //这里指的是房屋模型的所有对象
 
                 if(intersects.length>0) {
 
-                    var  x  =  camera1.position.x;
-                    var  y  =  camera1.position.y;
-                    var  z  =  camera1.position.z;                                                                      //原相机坐标;
+                    var  x  =  camera.position.x;
+                    var  y  =  camera.position.y;
+                    var  z  =  camera.position.z;                                                                      //原相机坐标;
 
                     var  x1 =  intersects[0].point.x;
                     var  y1 =  intersects[0].point.y;
                     var  z1 =  intersects[0].point.z;                                                                   //  射线与模型第一个交点坐标;   intersects[0]  这里表示射线与房屋模型对象的第一个交点
 
+
+                  //  console.log(y1);
 
                     var nearestPoint = kdtree.nearest([x1,y1,z1],1,20);                                                 //  最临近点
 
@@ -304,15 +308,15 @@
                     //console.log(ym);
 
 
-                     xchange =  (xm - x);
-                     zchange  =  (zm - z);
+                     xchange =  (x1 - x);
+                     zchange  =  (z1 - z);
 
                    // console.log(xchange+'---'+zchange);
-
+/*          camera1 position
                     new TWEEN.Tween(camera1.position).to(                                                               // Tween  camera1.position
                         {
                             x:xm,
-                            y:ym+0.5,
+                            y:ym,
                             z:zm
                         },2000)
                         .easing(TWEEN.Easing.Quadratic.InOut)
@@ -321,6 +325,44 @@
                             //console.log(xchange+','+zchange);
                         })
                         .start();
+                    */
+
+                    if(controls.getPolarAngle()-0.0001>0&&isMove==false)                                               //  过滤垂直俯视,转向移动
+
+                    {
+
+                            if(y1>-1.4&&y1<-1.2)                                                                        //地面情况
+                            {
+                            new TWEEN.Tween(camera.position).to(
+                                {
+                                    x:xm,
+                                    y:0,
+                                    z:zm
+                                },2000)
+                                .easing(TWEEN.Easing.Quadratic.InOut)
+
+                                .start();                                                                                       //Tween  camera.position
+
+
+                              new TWEEN.Tween(controls.target).to({                                                              //  controls.target
+
+                                    x:xm+(xchange)/32,
+                                    y:0,
+                                    z:zm+(zchange)/32
+
+                                  },2000)
+                                  .easing(TWEEN.Easing.Quadratic.InOut)
+                                  .start();
+                            }else                                                                                       //非地面情况
+                            {
+
+                                console.log("不在地面上");
+
+                            }
+
+
+                    }
+
 
                     /*     交点
                     new TWEEN.Tween(camera1.position).to({
@@ -354,6 +396,7 @@
                     //console.log("目标位置:"+)
 
 
+        /*         camera1
                     new TWEEN.Tween(lookAt)                                                                             // Tween    lookAt
                         .to({
                         x:x1+xchange,
@@ -375,6 +418,8 @@
 
                     // console.log(lookatx);
 
+
+                    */
                 }
 
             }
@@ -399,11 +444,14 @@
 
             function onDocumentMouseMove (event ){
 
+                isMove =true;
                 //  [-1,1]
 
                // console.log("camera.posiont xyz:"+camera.position.x+","+camera.position.y+","+camera.position.z);
 
                // console.log("control.target xyz:"+targetX+","+targetY+","+targetZ);
+
+              //  console.log(controls.getAzimuthalAngle()+'--垂直--:::'+controls.getPolarAngle());
 
                 mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
 
@@ -471,7 +519,7 @@
             function render(){
 
                TWEEN.update();
-               controls.update();renderer.render(scene,camera1);
+               controls.update();renderer.render(scene,camera);
 
             }
 
