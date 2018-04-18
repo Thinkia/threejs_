@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/VT-Test/general-test.html" afterPath="$PROJECT_DIR$/VT-Test/general-test.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="general-test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="276" column="81" lean-forward="true" selection-start-line="276" selection-start-column="81" selection-end-line="276" selection-end-column="81" />
+            <state relative-caret-position="760">
+              <caret line="369" column="90" lean-forward="true" selection-start-line="369" selection-start-column="90" selection-end-line="369" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -263,12 +262,12 @@
       <workItem from="1523790789926" duration="4780000" />
       <workItem from="1523840307531" duration="24639000" />
       <workItem from="1523925958183" duration="29443000" />
-      <workItem from="1524013384277" duration="19424000" />
+      <workItem from="1524013384277" duration="25017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161120000" />
+    <option name="totallyTimeSpent" value="166713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -281,7 +280,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11860718" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11860718" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -659,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="276" column="81" lean-forward="true" selection-start-line="276" selection-start-column="81" selection-end-line="276" selection-end-column="81" />
+        <state relative-caret-position="760">
+          <caret line="369" column="90" lean-forward="true" selection-start-line="369" selection-start-column="90" selection-end-line="369" selection-end-column="90" />
           <folding />
         </state>
       </provider>

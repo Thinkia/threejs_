@@ -36,7 +36,7 @@
 
         var rayPoint = new Array();                                                                                     //     射线源
 
-        var positions = new Float32Array(8*3);                                                                          //     8个三维坐标
+        var positions = new Float32Array(8*3);                                                                          //  8个三维坐标
         var kdtree ;                                                                                                    //   KD-Tree
 
 
@@ -47,7 +47,7 @@
 
         var lookatx=0,lookaty=0,lookatz=0;
 
-        var xchange=0,zchange=0;
+        var xchange=0,zchange=0,ychange=0;
 
 
         $(function () {
@@ -110,7 +110,7 @@
 
        // var   rayOrigin = new THREE.Vector3(0,0,0);    //  射线源点
 
-        var   rayDirection = new THREE.Vector3(0,-1,0);   // 射线方向              xy面法向量
+        var   rayDirection = new THREE.Vector3(0,-1,0);   // 射线方向              xz面法向量
 
         init();
         animate();
@@ -120,7 +120,7 @@
             container = document.createElement('div');
             document.body.appendChild( container );
 
-            camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,0.01,2000);
+            camera = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,0.01,2000);                    //相机基本属性
 
          //   camera1 = new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,2000);  //过渡相机
 
@@ -130,6 +130,7 @@
 
             camera.position.set(1.916,6.143,17.256);                                                                    //  相机初始位置
 
+            var initX=1.916,initY=6.143,initZ=17.256;
            // camera1.position.set(1.916,6.143,17.256);                                                                   //  过渡相机初始位置
 
 
@@ -164,7 +165,7 @@
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('src/floor3/');
-                objLoader.load('VT_Model.obj', function (object) {                                                     //模型
+                objLoader.load('VT_Model.obj', function (object) {                                                     //模型加载
 
                     mesh = object;  // 获取obj 对象 并保存
 
@@ -185,8 +186,9 @@
             var gridHelper = new THREE.GridHelper(10,20);
             //scene.add(gridHelper);                                                                                      //地面辅助工具
 
-            //controls                                                                                                     控制相机
+            //controls                                                                                                      控制相机
              controls = new THREE.OrbitControls(camera,renderer.domElement);
+
 
             // controls.dampingFactor = false;
 
@@ -204,6 +206,9 @@
             helperSphere =  new THREE.Mesh(new THREE.SphereGeometry(.05,20,20),new THREE.MeshNormalMaterial());
 
             scene.add(helperSphere);                                                                                            //辅助小球
+
+
+
 
             document.addEventListener('mousemove',onDocumentMouseMove,false);
 
@@ -284,6 +289,9 @@
 
                 if(intersects.length>0) {
 
+                    controls.rotateSpeed = -1;                                                                                    //  旋转速度
+
+
                     var  x  =  camera.position.x;
                     var  y  =  camera.position.y;
                     var  z  =  camera.position.z;                                                                      //原相机坐标;
@@ -297,7 +305,7 @@
 
                     var nearestPoint = kdtree.nearest([x1,y1,z1],1,20);                                                 //  最临近点
 
-                    console.log('最近投影点：'+nearestPoint[0][0]['obj'][0]+','+nearestPoint[0][0]['obj'][1]+','+nearestPoint[0][0]['obj'][2]);             //   kdtree -- nearest
+              //      console.log('最近投影点：'+nearestPoint[0][0]['obj'][0]+','+nearestPoint[0][0]['obj'][1]+','+nearestPoint[0][0]['obj'][2]);             //   kdtree -- nearest
 
 
 
@@ -309,7 +317,8 @@
 
 
                      xchange =  (x1 - x);
-                     zchange  =  (z1 - z);
+                     zchange =  (z1 - z);
+                     ychange =  (y1 - z);
 
                    // console.log(xchange+'---'+zchange);
 /*          camera1 position
@@ -356,7 +365,40 @@
                             }else                                                                                       //非地面情况
                             {
 
-                                console.log("不在地面上");
+                                console.log("不在地面上"+x1+','+y1+','+z1);
+
+                                if(x1>-0.9&&x1<-0.4  &&y1>-0.6&&y1<0 && z1>-2&&z1<1.1)   {                                                                                //电视
+                                    console.log("点中电视机所在矩形退回初始位置:")
+                                                                                                                        // -0.8880877192072782,-0.5761502941342928,-1.130744562678091
+                                                                                                                        // -0.8802677042998384,-0.04991820897111332,-1.1113757947196676
+                                                                                                                        // -0.4203266577384608,-0.601510209665427,-1.9718166111677717
+                                                                                                                        // -0.4060523606258606,-0.03489494268334988,-1.9700081400208544
+                                 new TWEEN.Tween(camera.position).to(
+                                     {
+                                         x:x - xchange*6,
+                                         y:initY,
+                                         z:z - zchange*6
+                                     },2000)
+                                     .easing(TWEEN.Easing.Quadratic.InOut)
+                                     .start();
+
+                                    new TWEEN.Tween(controls.target).to({                                                              //  controls.target
+
+                                        x:0,
+                                        y:0,
+                                        z:0
+
+                                    },2000)
+                                        .easing(TWEEN.Easing.Quadratic.InOut)
+                                        .start();
+
+                                    controls.rotateSpeed = 1;
+
+
+                                }
+
+
+
 
                             }
 
@@ -386,7 +428,7 @@
 */
                    // console.log(camera1);
 
-                                                                                                                         //                 loookAt
+                                                                                                                         //              loookAt
                     lookAt.x = lookatx;
                     lookAt.y = lookaty;
                     lookAt.z = lookatz;
