@@ -34,9 +34,9 @@
 <script>
 
 
-    var rayPoint = new Array();                                                                                       //     射线源
+    var rayPoint = new Array();                                                                                       //  射线源
 
-    var positions = new Float32Array(8*3);                                                                            //  8个三维坐标
+    var positions = new Float32Array(8*4);                                                                            //  8个三维坐标
     var kdtree ;                                                                                                       //   KD-Tree
 
 
@@ -45,16 +45,35 @@
 
     var isMouseDown = false;
 
-    var isInHome =false;                                                                                                //判断相机是否在房屋内
+    var isInHome =false;                                                                                               //判断相机是否在房屋内
 
-    var intentMouseRotate =false;                                                                                       //鼠标拖拽旋转模型意图
+    var isRotate = false ;                                                                                              //判断模型是否旋转
+
+    var isSetHelp = false;                                                                                             // 是否已经初始化辅助小立方体
+
+    var intentMouseRotate1 =0;                                                                                          //室外旋转意图      0 无意图  1有意图   -1取消意图
+
+    var intentMouseRotate2 = 0;                                                                                         //室内旋转意图和移动意图    0 无意图  1有意图   -1取消意图
+
+    var intentInHome = 0;                                                                                               //进入房间意图      0 无意图  1有初步意图   -1取消意图     2 有强烈意图
+
+    var intentOutHome = 0;                                                                                              //退出房间意图      0 无意图  1有意图   -1取消意图
 
 
-    var xchange=0,zchange=0,ychange=0;
+
+    var xd = 0;
+    var yd = 0;
+    var zd = 0;                                                                                                         //相机世界坐标系方向
 
 
 
-    var    thetaAzimuthal = 0, thetaPlolar=0;
+    var textureCount;                                                                                                   // 平面贴图数据
+
+    var planeGroup;                                                                                                     //平板组数据  40
+
+    var planeGroup1;                                                                                                     // 大平板数据 60
+
+    var planeGroup2;                                                                                                    //大平板 80
 
     $(function () {
         $.ajax(
@@ -138,7 +157,7 @@
 
         scene = new THREE.Scene();
 
-        var ambientLight = new THREE.AmbientLight(0xcccccc,0.4);
+        var ambientLight = new THREE.AmbientLight(0xffffff,1);
 
         console.log("环境光RGB：0xcccccc, 强度:0.4");
 
@@ -146,8 +165,9 @@
 
         var pointLight = new THREE.PointLight(0xffffff,0.8);
 
-        console.log("点光RGB:0xfffffff,强度0.8");
-        camera.add(pointLight);
+        // console.log("点光RGB:0xfffffff,强度0.8");
+        //  camera.add(pointLight);
+
         scene.add(camera);
 
         var onProgress = function (xhr){
@@ -170,12 +190,49 @@
             var objLoader = new THREE.OBJLoader();
             objLoader.setMaterials(materials);
             objLoader.setPath('src/floor3/');
-            objLoader.load('VT_Model.obj', function (object) {                                                     //模型加载
+            objLoader.load('VT_Model.obj', function (object) {                                                          //模型加载
 
                 mesh = object;  // 获取obj 对象 并保存
 
-                mesh.rotation.x = Math.PI / 2;                                                                       //模型绕x轴旋转  pi/2
+                mesh.rotation.x = Math.PI / 2;                                                                           //模型绕x轴旋转  pi/2
+                //   console.log(mesh['children'][0]['material'][0]['opacity']);                                                                                                     //debugger; 调试
+                //  console.log(mesh['children'][0]['material'].length);
+
+                for(var i=0;i<mesh['children'][0]['material'].length;i++)
+                {
+                    console.log(mesh['children'][0]['material'][i]['depthTest']);
+                    mesh['children'][0]['material'][i]['transparent'] =true;
+                    mesh['children'][0]['material'][i]['opacity'] = 1;
+
+                }
+
                 scene.add(object);
+
+                var geometry = new THREE.CubeGeometry(.1,.1,.1);
+
+                //  helper = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
+
+                helper = new Array();
+                // THREE.NoBlending;
+                for(var i=0;i<8;i++)                                                                                   // 场景添加辅助小立方体
+                {
+                    helper[i]=  new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
+                    helper[i].position.set(rayPoint.x,rayPoint.y,rayPoint.z);
+                    // helper[i]['material']['depthTest'] = false;                                                       //   !! 深度测试生效的前提之一是  transparent = true; !!
+                    helper[i]['material']['transparent'] = true;
+
+                    // helper[i]['material']['opacity']=0.99;
+
+                    console.log(helper[i]['material']['opacity']);
+                    console.log("点加载 ");
+                    scene.add(helper[i]);
+                }
+
+
+
+                // console.log(planeGroup);
+                // console.log("立方体加载");
+
             }, onProgress, onError);
 
         });
@@ -183,32 +240,30 @@
         renderer = new THREE.WebGLRenderer();
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth,window.innerHeight);
+
+        renderer.sortObjects = false;
+
         container.appendChild(renderer.domElement);
 
         //helper
 
         var gridHelper = new THREE.GridHelper(10,20);
-        //scene.add(gridHelper);                                                                                      //地面辅助工具
+        //  scene.add(gridHelper);                                                                                         //地面辅助工具
 
-        //controls                                                                                                        轨道控制器
+        //controls                                                                                                       // 轨道控制器            controls
         controls = new THREE.OrbitControls(camera,renderer.domElement);
 
-        controls.enableDamping = true;
+        controls.enableDamping = true;                                                                                  // 惯性
 
-        controls.dampingFactor = 0.5;
+        controls.rotateSpeed = 0.3;
+
+        //controls.dampingFactor = 1.5;                                                                                     // 相机旋转速度
         console.log('dampingFactor:'+controls.dampingFactor);
 
 
-        // controls.dampingFactor = false;
-
-        //controls.target.set(targetX,targetY,targetZ);                                                            //   controls.target
-
-
-        // camera1.lookAt(0,0,0);                     // 过渡相机  初始朝向
-
         // show axes in the screen
         var axes = new THREE.AxesHelper(20);
-        // scene.add(axes);                                                                                                  //辅助坐标系
+        //  scene.add(axes);                                                                                                  //辅助坐标系
 
         // mouseHelper
 
@@ -219,261 +274,578 @@
 
 
 
+
+
+        //cubemap                                                                                                          // Cube  立方体全景
+        var path = "textures/";
+        var format = '.jpg';
+        var urls = [
+            path + 'posx' + format, path + 'negx' + format,
+            path + 'posy' + format, path + 'negy' + format,
+            path + 'posz' + format, path + 'negz' + format
+        ];
+
+        var reflectionCube = new THREE.CubeTextureLoader().load( urls );
+        reflectionCube.format = THREE.RGBFormat;
+
+        var refractionCube = new THREE.CubeTextureLoader().load( urls );
+        refractionCube.mapping = THREE.CubeRefractionMapping;
+        refractionCube.format = THREE.RGBFormat;
+
+        // scene = new THREE.Scene();
+
+        // scene.background = reflectionCube;
+
+
+        // 平板组 -- 立方体全景
+
+        var url = './src/2k/';
+        textureCount = 1;
+
+        planeGroup = new THREE.Group();                                                                                 //平面组
+        var planeGeo = new THREE.PlaneBufferGeometry(40.01,40.01);
+
+        //top
+        var planeTop = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_1_high.jpg')}));             // ！！material 如果有颜色会与环境光产生影响，   无论有无颜色都会与点光源产生影响
+        planeTop.position.y = 20;
+        planeTop.rotateX(Math.PI / 2 );
+        planeTop.rotation.z = -Math.PI/2;
+        planeGroup.add(planeTop);
+
+        //front
+        var planeFront = new THREE.Mesh(planeGeo, new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_2_high.jpg')}));
+        planeFront.position.z = 20;
+        planeFront.position.y = 0;
+        planeFront.rotateY(Math.PI);
+        planeGroup.add(planeFront);
+
+        // left
+        var planeLeft = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_3_high.jpg')}) );
+        planeLeft.position.x = -20;
+        planeLeft.position.y = 0;
+        planeLeft.rotateY(Math.PI/2);
+        planeGroup.add(planeLeft);
+
+        //behind
+        var planeBehind = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_4_high.jpg')}));
+        planeBehind.position.z = -20;
+        planeBehind.position.y = 0;
+        //planeBehind.rotateZ(-Math.PI/2);
+        planeGroup.add(planeBehind);
+
+        //right
+        var planeRight = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_5_high.jpg')}));
+        planeRight.position.x = 20 ;
+        planeRight.position.y = 0;
+        planeRight.rotateY(- Math.PI/2);
+        planeGroup.add(planeRight);
+
+
+        //bottom
+        var planeBottom = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_6_high.jpg')}));
+        planeBottom.position.y = -20;
+        planeBottom.rotateX(-Math.PI/2);
+        planeBottom.rotation.z = Math.PI;
+        planeGroup.add(planeBottom);
+
+        scene.add(planeGroup);                                                                                  //加载40立方体全景
+
+
+
+        //console.log(planeGroup['children']);
+        planeGroup1 = new THREE.Group();                                                                                 //平面组  60
+        var planeGeo = new THREE.PlaneBufferGeometry(60.01,60.01);
+
+        //top
+        var planeTop = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_1_high.jpg')}));             // ！！material 如果有颜色会与环境光产生影响，   无论有无颜色都会与点光源产生影响
+        planeTop.position.y = 30;
+        planeTop.rotateX(Math.PI / 2 );
+        planeTop.rotation.z = -Math.PI/2;
+        planeGroup1.add(planeTop);
+
+        //front
+        var planeFront = new THREE.Mesh(planeGeo, new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_2_high.jpg')}));
+        planeFront.position.z = 30;
+        planeFront.position.y = 0;
+        planeFront.rotateY(Math.PI);
+        planeGroup1.add(planeFront);
+
+        // left
+        var planeLeft = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_3_high.jpg')}) );
+        planeLeft.position.x = -30;
+        planeLeft.position.y = 0;
+        planeLeft.rotateY(Math.PI/2);
+        planeGroup1.add(planeLeft);
+
+        //behind
+        var planeBehind = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_4_high.jpg')}));
+        planeBehind.position.z = -30;
+        planeBehind.position.y = 0;
+        //planeBehind.rotateZ(-Math.PI/2);
+        planeGroup1.add(planeBehind);
+
+        //right
+        var planeRight = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_5_high.jpg')}));
+        planeRight.position.x = 30 ;
+        planeRight.position.y = 0;
+        planeRight.rotateY(- Math.PI/2);
+        planeGroup1.add(planeRight);
+
+
+        //bottom
+        var planeBottom = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_6_high.jpg')}));
+        planeBottom.position.y = -30;
+        planeBottom.rotateX(-Math.PI/2);
+        planeBottom.rotation.z = Math.PI;
+        planeGroup1.add(planeBottom);
+
+        scene.add(planeGroup1);                                                                                  //加载60立方体全景
+
+        planeGroup2 = new THREE.Group();                                                                                 //平面组  80
+        var planeGeo = new THREE.PlaneBufferGeometry(80.01,80.01);
+
+        //top
+        var planeTop = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_1_high.jpg')}));             // ！！material 如果有颜色会与环境光产生影响，   无论有无颜色都会与点光源产生影响
+        planeTop.position.y = 40;
+        planeTop.rotateX(Math.PI / 2 );
+        planeTop.rotation.z = -Math.PI/2;
+        planeGroup2.add(planeTop);
+
+        //front
+        var planeFront = new THREE.Mesh(planeGeo, new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_2_high.jpg')}));
+        planeFront.position.z = 40;
+        planeFront.position.y = 0;
+        planeFront.rotateY(Math.PI);
+        planeGroup2.add(planeFront);
+
+        // left
+        var planeLeft = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_3_high.jpg')}) );
+        planeLeft.position.x = -40;
+        planeLeft.position.y = 0;
+        planeLeft.rotateY(Math.PI/2);
+        planeGroup2.add(planeLeft);
+
+        //behind
+        var planeBehind = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_4_high.jpg')}));
+        planeBehind.position.z = -40;
+        planeBehind.position.y = 0;
+        //planeBehind.rotateZ(-Math.PI/2);
+        planeGroup2.add(planeBehind);
+
+        //right
+        var planeRight = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_5_high.jpg')}));
+        planeRight.position.x = 40 ;
+        planeRight.position.y = 0;
+        planeRight.rotateY(- Math.PI/2);
+        planeGroup2.add(planeRight);
+
+
+        //bottom
+        var planeBottom = new THREE.Mesh(planeGeo,new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture(url+'Pannorama_00'+textureCount+'_6_high.jpg')}));
+        planeBottom.position.y = -40;
+        planeBottom.rotateX(-Math.PI/2);
+        planeBottom.rotation.z = Math.PI;
+        planeGroup2.add(planeBottom);
+
+        scene.add(planeGroup2);                                                                                  //加载60立方体全景
+
+
+
+        //     console.log(scene);
+
+
+
+        /*  scene.add(planeGroup);
+
+          console.log("立方体加载");*/
+
+
         document.addEventListener('mousemove',onDocumentMouseMove,false);
 
         window.addEventListener('resize',onWindowResize,false);
 
 
-        var geometry = new THREE.CubeGeometry(.1,.1,.1);
+        /* var geometry = new THREE.CubeGeometry(.1,.1,.1);
 
-        //  helper = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
+         //  helper = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
 
-        helper = new Array();
+         helper = new Array();
 
-        for(var i=0;i<8;i++)                                                                                        // 场景添加辅助小立方体
-        {
-            helper[i]=  new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
-            helper[i].position.set(rayPoint.x,rayPoint.y,rayPoint.z);
-            scene.add(helper[i]);
-        }
+         for(var i=0;i<8;i++)                                                                                           // 场景添加辅助小立方体
+         {
+             helper[i]=  new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
+             helper[i].position.set(rayPoint.x,rayPoint.y,rayPoint.z);
+             helper[i]['material']['depthTest'] = false;
+            // console.log(helper[i]['material']);
+             scene.add(helper[i]);
+         }*/
 
         var distanceFunction = function ( a, b ) {
-            return Math.pow( a[ 0 ] - b [0 ], 2 ) +  Math.pow( a[ 1 ] - b[ 1 ], 2 ) +  Math.pow( a[ 2 ] - b[ 2 ], 2 );          //   求两点距离平方 函数
+            return Math.pow( a[ 0 ] - b [0 ], 2 ) +  Math.pow( a[ 1 ] - b[ 1 ], 2 ) +  Math.pow( a[ 2 ] - b[ 2 ], 2 );  //   求两点距离平方 函数
         };
+
+
+        var showDomeFunction = function(){                                                                                     //显示模型
+
+
+        }
+
+        var hideDomeFunction =  function () {                                                                                  //隐藏模型
+
+
+
+        }
+
+
 
 
         document.onmousedown = function () {
 
-            // console.log("当前相机位置:"+camera1.position.x+','+camera1.position.y+','+camera1.position.z);
-            //  console.log("当前朝向lookat"+lookatx+','+lookaty+','+lookatz);
-
-            //   console.log("lookatx:"+lookatx);
             isMove =false;
-            //      console.log("xchange:"+xchange);
-
             isMoveCount = 0;
             isMouseDown = true;
-            console.log("按下鼠标");
+
+
+
+            if(!isInHome) {
+                if (intentInHome == 0) {
+                    intentMouseRotate1 = 1;
+                    console.log("有强旋转模型意图");
+                }
+                if (intentInHome == 1) {
+                    console.log("有弱旋转模型或者强烈进入房间意图");
+                    intentMouseRotate1 = 1;
+                    intentInHome = 2;
+                }
+            }
+            // console.log("按下鼠标");
+
+
+            /*                   隐藏  obj                       ---  obj-material-opacity(0,1)-->0          !!!<-->! transparent == true;
+             for(var i=0;i<mesh['children'][0]['material'].length;i++)
+             {
+                 console.log(mesh['children'][0]['material'][i]['opacity']);
+                 mesh['children'][0]['material'][i]['transparent'] =true;
+                 mesh['children'][0]['material'][i]['opacity'] = 0;
+
+             }
+
+             */
         }
 
-
-
-        document.onmouseup = function () {                                                                          // 鼠标点击事件  mouseup
+        document.onmouseup = function () {                                                                             // 鼠标点击事件  mouseup
 
             //controls.update();
+            // isMove =false;
 
-           // isMove =false;
+            intentMouseRotate1 = -1;                                                                                    //取消室外旋转意图
+            isRotate = false;                                                                                          // 取消旋转状态
 
             isMouseDown = false;
-            console.log("松开鼠标按键");
-           // console.log(isMoveCount);
-            if(1==isMoveCount)
-            {
-                console.log("换角度观察房间意图取消");
-            }
+            // console.log("松开鼠标按键");
+
             //  console.log(controls.target);
 
-            for(var i=0;i<8;i++) {
+            if (!isSetHelp) {                                                                                           //是否已经设置辅助小块
+                isSetHelp = true;
+                console.log("辅助小立方体，KD树生成完毕!");
+                console.log(scene);
+                for (var i = 0; i < 8; i++) {
+                    raycaster.set(rayPoint[i], rayDirection);                                                           //设置射线源点  与方向         射线在地面的投影
+                    //  console.log("射线在地面的投影:");
 
-                raycaster.set(rayPoint[i], rayDirection);                                                            //设置射线源点  与方向         射线在地面的投影
+                    var intersects = raycaster.intersectObjects(mesh.children, true);
+                    //  console.log(intersects[0]['distance']);                                                          // distance
+                    if (intersects.length > 0) {
+                        helper[i].position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);    // intersects[0]  这里表示射线与房屋模型对象的第一个交点
+                        //    console.log(helper[i].position.x+","+helper[i].position.y+","+helper[i].position.z);
 
+                        positions[i * 4 + 0] = intersects[0].point.x;
+                        positions[i * 4 + 1] = intersects[0].point.y;
+                        positions[i * 4 + 2] = intersects[0].point.z;                                                     //将8个投影点 存放在 positions 数组里;
+                        positions[i * 4 + 3] = i;                                                                         //下标保存在第四个位置上
 
-                //  console.log("射线在地面的投影:");
-
-                var intersects = raycaster.intersectObjects(mesh.children, true);
-
-                //  console.log(intersects[0]['distance']);                                                              // distance
-
-                if (intersects.length > 0) {
-                    helper[i].position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);     //  intersects[0]  这里表示射线与房屋模型对象的第一个交点
-                    //    console.log(helper[i].position.x+","+helper[i].position.y+","+helper[i].position.z);
-
-                    positions[i*3+0] = intersects[0].point.x;
-                    positions[i*3+1] = intersects[0].point.y;
-                    positions[i*3+2] = intersects[0].point.z;                                                       //  将8个投影点 存放在 positions 数组里;
-
+                    }
                 }
 
-            }
+                kdtree = new THREE.TypedArrayUtils.Kdtree(positions, distanceFunction, 4);                               //KD-Tree 算法
 
-            kdtree  = new THREE.TypedArrayUtils.Kdtree(positions,distanceFunction,3);                                 // KD-Tree
-
-            //  console.log(positions);
-            // console.log(kdtree);
-
-            mouse.x = (event.clientX / renderer.domElement.clientWidth )*2-1;
-
-            mouse.y = -(event.clientY / renderer.domElement.clientHeight )*2+1;
-
-            raycaster.setFromCamera(mouse,camera);                                                                 // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
-
-            var intersects = raycaster.intersectObjects(mesh.children,true);                                        //这里指的是房屋模型的所有对象
-
-            if(intersects.length>0) {
-
-                controls.rotateSpeed = -1;                                                                              //  旋转速度
+            }                                                                                                            //KD树与辅助小立方体生成
 
 
-                var  x  =  camera.position.x;
-                var  y  =  camera.position.y;
-                var  z  =  camera.position.z;                                                                      //原相机坐标;
+            mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
 
-                var  x1 =  intersects[0].point.x;
-                var  y1 =  intersects[0].point.y;
-                var  z1 =  intersects[0].point.z;                                                                   //  射线与模型第一个交点坐标;   intersects[0]  这里表示射线与房屋模型对象的第一个交点
+            mouse.y = -(event.clientY / renderer.domElement.clientHeight) * 2 + 1;
 
 
-                //  console.log(y1);
+            if (intentInHome == 2  || isInHome) {                                                                       //在房间内且
 
-                var nearestPoint = kdtree.nearest([x1,y1,z1],1,20);                                                 //  最临近点
+                raycaster.setFromCamera(mouse, camera);                                                                 // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
+                var intersects = raycaster.intersectObjects(mesh.children, true);                                      //这里指的是房屋模型的所有对象
+                if (intersects.length > 0) {
 
-                //      console.log('最近投影点：'+nearestPoint[0][0]['obj'][0]+','+nearestPoint[0][0]['obj'][1]+','+nearestPoint[0][0]['obj'][2]);             //   kdtree -- nearest
+                    var x = camera.position.x;
+                    var y = camera.position.y;
+                    var z = camera.position.z;                                                                          //原相机坐标;
 
+                    var x1 = intersects[0].point.x;
+                    var y1 = intersects[0].point.y;
+                    var z1 = intersects[0].point.z;                                                                     //  射线与模型第一个交点坐标;   intersects[0]  这里表示射线与房屋模型对象的第一个交点
 
+                    var nearestPoint = kdtree.nearest([x1, y1, z1], 1, 20);                                             //  最临近点设置
 
-                var xm =  nearestPoint[0][0]['obj'][0] ;
-                var ym =  nearestPoint[0][0]['obj'][1] ;
-                var zm =  nearestPoint[0][0]['obj'][2] ;
+                    var xm = nearestPoint[0][0]['obj'][0];
+                    var ym = nearestPoint[0][0]['obj'][1];
+                    var zm = nearestPoint[0][0]['obj'][2];
+                    var nearestCount = nearestPoint[0][0]['obj'][3];
 
-                //console.log(ym);
-
-
-                xchange =  (x1 - x);
-                zchange =  (z1 - z);
-                ychange =  (y1 - y);
-
-                // console.log(xchange+'---'+zchange);
-                /*          camera1 position
-                                    new TWEEN.Tween(camera1.position).to(                                                               // Tween  camera1.position
-                                        {
-                                            x:xm,
-                                            y:ym,
-                                            z:zm
-                                        },2000)
-                                        .easing(TWEEN.Easing.Quadratic.InOut)
-                                        .onUpdate(function () {
-
-                                            //console.log(xchange+','+zchange);
-                                        })
-                                        .start();
-                                    */
-
-                if(controls.getPolarAngle()-0.0001>0&&isMoveCount<2)                                                   //  过滤垂直俯视,转向移动
-
-                {
-
-                    if(y1>-1.4&&y1<-1.2)                                                                                     //是否点击地面
-                    {
-                                if(isInHome==false)                                                                         //是否从室外点击地面
-                                {
-
-                                        new TWEEN.Tween(camera.position).to(                                                //相机平移到数据采集点
-                                        {
-                                            x:xm,
-                                            y:0,
-                                            z:zm
-                                        },1500)
-                                        .easing(TWEEN.Easing.Quadratic.InOut)
-
-                                        .start();                                                                               //Tween  camera.position
-
-                                    new TWEEN.Tween(controls.target).to({                                                       //  controls.target 抬升效果
-
-                                        x:xm+camera.getWorldDirection().x/32,
-                                        y:0,
-                                        z:zm+camera.getWorldDirection().z/32
-
-                                    },1500)
-                                        .easing(TWEEN.Easing.Quadratic.InOut)
-                                        .start();
-
-                                    console.log("优雅的进入房间    ----TweenJs 渐变   相机平移并抬升");
-                                    isInHome = true;                                                                    //表示相机已经进入房间
-                                }else{                                                                                  //在室内移动
-
-                                    console.log("相机朝向 向量（xyz):"+camera.getWorldDirection().x+","+camera.getWorldDirection().y+","+camera.getWorldDirection().z);
-
-                                    new TWEEN.Tween(camera.position).to(
-                                        {
-                                            x:xm,
-                                            y:0,
-                                            z:zm
-                                        },1000)
-                                        .easing(TWEEN.Easing.Quadratic.InOut)
-
-                                        .start();                                                                               //Tween  camera.position
+                    xd = camera.getWorldDirection().x;
+                    yd = camera.getWorldDirection().y;
+                    zd = camera.getWorldDirection().z;                                                                   // 当前相机方向
 
 
-                                    new TWEEN.Tween(controls.target).to({                                                       //  controls.target 抬升效果
-
-                                        x:xm+camera.getWorldDirection().x/32,
-                                        y:0+camera.getWorldDirection().y/32,
-                                        z:zm+camera.getWorldDirection().z/32
-
-                                    },1000)
-                                        .easing(TWEEN.Easing.Quadratic.InOut)
-                                        .start();
-
-                                }
-
-                    }else                                                                                               //非地面情况
+                    if (controls.getPolarAngle() - 0.0001 > 0 && isMoveCount < 2 )                                                    //  过滤垂直俯视,转向移动
                     {
 
-                        if( isInHome==true )                                                                              // 在房间内
+                        //    if (y1 > -1.4 && y1 < -1.2)                                                                                //点击地面情况
+                        //   {
+                        if(isInHome == false)                                                                       //是否从室外点击地面
                         {
-                            console.log("不在地面上"+x1+','+y1+','+z1);
+                            new TWEEN.Tween(camera.position).to(                                                     //相机平移到数据采集点
+                                {
+                                    x: xm,
+                                    y: 0,
+                                    z: zm
+                                }, 1500)
+                                .easing(TWEEN.Easing.Quadratic.InOut)
+                                .onUpdate (function(){
+                                    console.log("正在从室外进入房间");
+                                })
+                                .start();                                                                               //Tween  camera.position
 
-                            if(x1>-0.9&&x1<-0.4  &&y1>-0.6&&y1<0 && z1>-2&&z1<1.1)   {                     //在屋内点击电视区域
-                            console.log("优雅的退出房间   ----- 点击电视区域退出房间")
-                            // -0.8880877192072782,-0.5761502941342928,-1.130744562678091
-                            // -0.8802677042998384,-0.04991820897111332,-1.1113757947196676
-                            // -0.4203266577384608,-0.601510209665427,-1.9718166111677717
-                            // -0.4060523606258606,-0.03489494268334988,-1.9700081400208544
+                            new TWEEN.Tween(controls.target).to({                                                       //  controls.target 抬升效果
+
+                                x: xm + xd/ 32,
+                                y: 0,
+                                z: zm +zd/ 32
+
+                            }, 1500)
+                                .easing(TWEEN.Easing.Quadratic.InOut)
+                                .onComplete (function () {
+
+                                    for(var i=0;i<mesh['children'][0]['material'].length;i++)
+                                    {
+                                        console.log(mesh['children'][0]['material'][i]['opacity']);
+                                        mesh['children'][0]['material'][i]['transparent'] =true;
+                                        mesh['children'][0]['material'][i]['opacity'] = 0;
+
+                                    }
+                                })
+
+                                .start();
+
+                            console.log("优雅的进入房间");
+                            console.log(scene);
+
+
+
+                            controls.rotateSpeed = -0.3;                                                                          //  旋转速度
+
+                            //*              隐藏  obj                       ---  obj-material-opacity(0,1)-->0          !!!<-->! transparent == true;
+                            /*   for(var i=0;i<mesh['children'][0]['material'].length;i++)
+                               {
+                                   console.log(mesh['children'][0]['material'][i]['opacity']);
+                                   mesh['children'][0]['material'][i]['transparent'] =true;
+                                   mesh['children'][0]['material'][i]['opacity'] = 0;
+
+                               }*/
+
+                            textureCount = nearestCount+1;
+
+                            console.log("count"+textureCount);
+                            // planeGroup[]
+                            for(var i =0;i<planeGroup['children'].length;i++)
+                            {
+                                var j = i+1;
+                                planeGroup['children'][i]['material']['map'] = THREE.ImageUtils.loadTexture(url + 'Pannorama_00' + textureCount + '_'+j+'_high.jpg');
+                            }
+
+
+
+                            isInHome = true;                                                                    //表示相机已经进入房间
+                        }
+                        else {                                                                                  //在室内移动
+
+                            textureCount = nearestCount+1;
+                            //console.log("第"+textureCount+"个场景 全景低清图加载完毕");
+                            // planeGroup[]
+                            for(var i =0;i<planeGroup['children'].length;i++)                                         //临近点全景加载
+                            {
+                                var j = i + 1;
+                                // console.log("替换前图片路径");
+                                // console.log(planeGroup['children'][i]['material']['map']['image']['currentSrc']);
+                                //  planeGroup['children'][i]['material']['transparent']=false;
+
+                                planeGroup['children'][i]['material']['map'] = THREE.ImageUtils.loadTexture('./src/512/' + 'Pannorama_00' + textureCount + '_' + j + '_low.jpg');                   //邻近点位40立方体加载低清图
+                                /*  console.log("替换后图片路径");
+                                  console.log(planeGroup['children'][i]['material']['map']);
+*/
+                                planeGroup1['children'][i]['material']['map'] = THREE.ImageUtils.loadTexture('./src/1k/' + 'Pannorama_00' + textureCount + '_' + j + '_mob.jpg');                   //临近点位60立方体加载中清图
+
+                            }
                             new TWEEN.Tween(camera.position).to(
                                 {
-                                    x:x - camera.getWorldDirection().x*6,
-                                    y:initY,
-                                    z:z - camera.getWorldDirection().z*6
+                                    x: xm,
+                                    y: 0,
+                                    z: zm
                                 },1500)
                                 .easing(TWEEN.Easing.Quadratic.InOut)
+                                .onStart(function () {
+
+                                })
+                                .start();                                                                               //Tween  camera.position
+                            /*
+                                                           for(var i =0;i<planeGroup['children'].length;i++)                                         //临近点全景加载
+                                                            {
+                                                                planeGroup['children'][i]['material']['transparent']=true;
+                                                                new TWEEN.Tween(planeGroup['children'][i]['material'])                                      // 40 立方体全景 渐渐透明;
+                                                                    .to(
+                                                                        {
+                                                                            opacity: 0
+                                                                        }, 1500)
+                                                                    .easing(TWEEN.Easing.Quadratic.InOut)
+                                                                    .start();
+
+                                                                planeGroup1['children'][i]['material']['transparent']=true;
+
+                                                                planeGroup1['children'][i]['material']['opacity']=0;
+                                                                new TWEEN.Tween(planeGroup1['children'][i]['material'])                                      // 60 立方体全景 渐渐显示;
+                                                                    .to(
+                                                                        {
+                                                                            opacity: 1
+                                                                        }, 1500)
+                                                                    .easing(TWEEN.Easing.Quadratic.InOut)
+                                                                    .start();
+
+
+                                                            }*/
+
+                            new TWEEN.Tween(controls.target).to({
+
+                                x: xm+ xd/32 ,
+                                y: 0 + yd/32 ,
+                                z: zm +zd/32
+
+                            },1500)
+                                .easing(TWEEN.Easing.Quadratic.InOut)
+                                .onComplete(function () {
+                                    for(var i=0;i<mesh['children'][0]['material'].length;i++) {
+
+                                        mesh['children'][0]['material'][i]['opacity'] = 0;
+                                        /*    new TWEEN.Tween(mesh['children'][0]['material'][i]).to({
+                                                opacity:0
+                                            },500)                                                                        //100毫秒后隐藏模型
+                                                .easing(TWEEN.Easing.Quadratic.InOut)
+                                                .start();
+                                        */
+                                    }
+
+                                    for(var i =0;i<planeGroup['children'].length;i++)                                      //全景切换
+                                    {
+
+                                        planeGroup['children'][i]['material']['transparent'] = true;
+                                        planeGroup['children'][i]['material']['opacity'] = 0;                               //40全景隐藏
+                                        console.log("隐藏 40 ")
+                                    }
+
+
+                                })
                                 .start();
 
 
-                            isInHome = false;                                                                           //平滑退出房间
-                            controls.rotateSpeed = 1;
+
+                            for(var i=0;i<mesh['children'][0]['material'].length;i++)
+                            {
+                                mesh['children'][0]['material'][i]['opacity'] = 1;                                  //瞬间显示模型
+
                             }
+
+
+
+                            for(var i =0;i<planeGroup['children'].length;i++)                                      //全景切换
+                            {
+                                planeGroup['children'][i]['material']['transparent'] = true;
+                                planeGroup['children'][i]['material']['opacity'] = 1;                               //40全景显示
+                            }
+
+
+
+                            //  console.log("!!!!!!相机朝向 向量（xyz):" + camera.getWorldDirection().x + "," + camera.getWorldDirection().y + "," + camera.getWorldDirection().z);
+
+                            /*                      textureCount = nearestCount+1;
+
+                                                  console.log("count"+textureCount);
+                                                  // planeGroup[]
+                                                  for(var i =0;i<planeGroup['children'].length;i++)                                         //全景切换
+                                                  {
+                                                      var j = i+1;
+                                                      planeGroup['children'][i]['material']['map'] = THREE.ImageUtils.loadTexture(url + 'Pannorama_00' + textureCount + '_'+j+'_high.jpg');
+                                                  }
+
+                                                  for(var i=0;i<mesh['children'][0]['material'].length;i++)
+                                                  {
+                                                      mesh['children'][0]['material'][i]['opacity'] = 1;                                      //瞬间显示模型
+                                                      //  console.log( mesh['children'][0]['material'][i].opacity);
+                                                  }
+
+
+                                                  for(var i=0;i<mesh['children'][0]['material'].length;i++)
+                                                  {
+                                                     new TWEEN.Tween(mesh['children'][0]['material'][i]).to({                                 // 模型显示后透明渐变
+
+                                                         opacity:0
+                                                     },3000)
+                                                         .easing(TWEEN.Easing.Quadratic.InOut)
+                                                         .start();
+                                                  }*/
+
                         }
 
                     }
+                    //  else {
+                    if (isInHome == true &&x1 > -0.9 && x1 < -0.4 && y1 > -0.6 && y1 < 0 && z1 > -2 && z1 < 1.1)         //在屋内点击电视区域  退出房间
+                    {
 
+                        for(var i=0;i<mesh['children'][0]['material'].length;i++)                               // 材质纹理取消透明
+                        {
+                            // console.log(mesh['children'][0]['material'][i]['opacity']);
+                            mesh['children'][0]['material'][i]['transparent'] =false;
+                            //mesh['children'][0]['material'][i]['opacity'] = 0;
 
-                }
+                        }
 
-
-                /*     交点
-                new TWEEN.Tween(camera1.position).to({
-                    x:x2,
-                    y:y2,
-                    z:z2
-                },2000).easing(TWEEN.Easing.Quadratic.InOut).start();                                                 //  http://sole.github.io/tween.js/examples/03_graphs.html
-                */
-
-                //camera.lookAt(x1,y1,z1);   //  相机朝向 交点;
-
-
-
-                /*
-                                    new TWEEN.Tween(controls.target).to({
-                                        x:0,
-                                        y:0,
-                                        z:z1
-                                    },1000).easing(TWEEN.Easing.Quadratic.InOut).start();
-                */
-                // console.log(camera1);
-
+                        console.log("优雅的退出房间   ----- 点击电视区域退出房间")
+                        // -0.8880877192072782,-0.5761502941342928,-1.130744562678091
+                        // -0.8802677042998384,-0.04991820897111332,-1.1113757947196676
+                        // -0.4203266577384608,-0.601510209665427,-1.9718166111677717
+                        // -0.4060523606258606,-0.03489494268334988,-1.9700081400208544
+                        new TWEEN.Tween(camera.position).to(
+                            {
+                                x: x - camera.getWorldDirection().x * 6,
+                                y: initY,
+                                z: z - camera.getWorldDirection().z * 6
+                            }, 2000)
+                            .easing(TWEEN.Easing.Quadratic.InOut)
+                            .start();
+                        isInHome = false;                                                                           //平滑退出房间
+                        controls.rotateSpeed = 0.3;
+                    }
+                }                                                                                                        //点击非地面情况
             }
-
         }
+
+        // }                                                           // 强烈进入房间意图 才允许进入房间
+
 
 
 
@@ -497,51 +869,63 @@
 
             //isMoveCount = 0;
             isMoveCount++;
-            isMove =true;
 
-
-
+            if(!isMove)isMove =true;
 
             if(isInHome == false)
             {                                                                                                            //鼠标室外移动
 
-                    console.log("-----正在室外移动鼠标")
-                    if(isMouseDown==true&&isMoveCount==3)
-                    {
+                if(!isRotate) {
+                    switch (intentInHome) {
+                        case 0:
+                            console.log("正在室外观察房屋");
+                            break;
+                        case -1: {
+                            console.log("进入房间意图取消");
+                            intentInHome = 0;
+                        }
+                            break;
+                        case 1:
+                            console.log("有初步进入房间意图");
+                            break;
+                        default:
+                            break;
+                    }                                                                                                //进入房间意图
+                }                                                                                   //不旋转模型移动鼠标情况
 
+                if(intentMouseRotate1 == 1)
+                {
+                    console.log("正在室外旋转模型");
+                    isRotate = true;
+                }
 
-                        console.log("正在室外观察房间   --------- 室外旋转模型，方向:"+controls.rotateSpeed);
-                    }
+                if(isMouseDown==true)
+                {
 
-                    if(isMouseDown==true&&isMoveCount==1)
-                    {
+                }
 
-                        intentMouseRotate = true;
-                        console.log("有换角度观察房间意图(外）--------鼠标准备拖拽移动模型");
-                    }
-
-            }
+            }                                                                                                        //  室外移动鼠标情况
             else                                                                                                   //鼠标室内移动
             {
-                    console.log("-----鼠标在室内移动");
-                    if(isMouseDown==true&&isMoveCount>=3)
-                    {
-                        console.log("正在室内观察房间   --------- 室外旋转模型，方向:"+controls.rotateSpeed);
-                        console.log(controls.target);
-                        console.log("相机朝向 向量（xyz):"+camera.getWorldDirection().x+","+camera.getWorldDirection().y+","+camera.getWorldDirection().z);
+                console.log("-----鼠标在室内移动");
+                if(isMouseDown==true&&isMoveCount>=3)
+                {
+                    console.log("正在室内观察房间   --------- 室外旋转模型，旋转方向:"+controls.rotateSpeed);
+                    // console.log(controls.target);
+                    // console.log("相机朝向 向量（xyz):"+camera.getWorldDirection().x+","+camera.getWorldDirection().y+","+camera.getWorldDirection().z);
 
 
-                    }
+                }
 
-                    if(isMouseDown==true&&isMoveCount==1)
-                    {
+                if(isMouseDown==true&&isMoveCount==1)
+                {
 
-                        intentMouseRotate = true;
-                        console.log("有换角度观察房间意图（内）   --------  鼠标准备拖拽移动模型");
-                    }
+                    intentMouseRotate1 = 1;
+                    console.log("有换角度观察房间意图（内）   --------  鼠标准备拖拽移动模型");
+                }
             }
 
-        // console.log(isMoveCount);
+            // console.log(isMoveCount);
             //  [-1,1]
 
             // console.log("camera.posiont xyz:"+camera.position.x+","+camera.position.y+","+camera.position.z);
@@ -559,66 +943,42 @@
             var intersects = raycaster.intersectObjects(mesh.children,true);//这里指的是房屋模型的所有对象
 
             if(intersects.length>0) {
+                helperSphere.position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);//  intersects[0]  这里表示射线与房屋模型对象的第一个交点     小球移动
+                intentInHome = 1;
 
-                helperSphere.position.set(intersects[0].point.x, intersects[0].point.y, intersects[0].point.z);//  intersects[0]  这里表示射线与房屋模型对象的第一个交点
-
-                //console.log("鼠标在模型上----------------模型交点世界坐标为"+intersects[0].point.x+','+ intersects[0].point.y+','+ intersects[0].point.z);
-
+                // console.log("有进入房间意图" );
+            }else
+            {
+                if(intentInHome==1)
+                    intentInHome = -1;
             }
+
+
+
+
+            //  console.log(intersects.length);
+
 
             //   console.log(rayPoint[i]);
             // console.log(helper[i]);
         }
 
-        /*
-         console.log(mouse.x,mouse.y)
-
-         raycaster.setFromCamera(mouse,camera);  // camera  射线的起点     mouse 为鼠标移动所在的 二维坐标
-
-         var intersects = raycaster.intersectObjects(mesh.children,true);//这里指的是房屋模型的所有对象
-
-           if(intersects.length>0){
-
-               helper.position.set(intersects[0].point.x,intersects[0].point.y,intersects[0].point.z);//  intersects[0]  这里表示射线与房屋模型对象的第一个交点
-
-
-               console.log(intersects[0]);
-
-               console.log("射线与对象的交叉点数 length:"+intersects.length);
-
-               console.log("射线源 向量：" + camera.position.x+','+camera.position.y+','+camera.position.z);
-
-               console.log("在世界坐标中的第一个交叉点坐标："+intersects[0].point.x+','+intersects[0].point.y+','+intersects[0].point.z );
-
-               console.log("射线源到第一个交点的距离:"+intersects[0].distance);
-
-               console.log("第一个相交面："+intersects[0].face);
-
-               console.log("相交面的索引："+intersects[0].faceIndex);
-
-               console.log("组成相交面的顶点索引:" + intersects[0].indices);
-
-
-               console.log("相交的对象:"+ intersects[0].object);
-
-
-
-           }
-                */
     }
 
 
     function animate(){
 
+        controls.update();
         requestAnimationFrame(animate);
         render();
 
     }
 
+
     function render(){
 
         TWEEN.update();
-        controls.update();
+        //controls.update();
         renderer.render(scene,camera);
 
     }
