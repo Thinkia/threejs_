@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纹理投影测试</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<script src="../../main/three.js"></script>
+<script type="text/javascript" src="../../lib/js/controls/OrbitControls.js"></script>
+<script type="x-shader/x-vertex" id="vertexshader">
+
+        varying vec3 fragPosition;
+
+        void main(void){
+
+        mat4 mvp = projectionMatrix * modelViewMatrix ;
+
+        fragPosition = position.xyz;
+
+        gl_Position  = mvp * vec4(position,1.0);
+
+        }
+
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentshader">
+
+        varying vec3 fragPosition;
+        uniform mat4 modelMatrix;
+        uniform mat4 projectorMatrix;
+        uniform mat4 projectorViewMatrix;
+        uniform sampler2D projectorMap;
+
+        void main(void){
+
+        vec4 projectorColor = vec4(0.0);
+        vec4 positionInProjectorSpace =  projectorMatrix * projectorViewMatrix * modelMatrix * vec4(fragPosition,1.0);
+        positionInProjectorSpace /= positionInProjectorSpace.w;
+        vec2 projectorUV = (positionInProjectorSpace.xy+1.0) * 0.5;
+
+       if(projectorUV.x >= 0.0 &&projectorUV.x <= 1.0 &&projectorUV.y>=0.0 && projectorUV.y <= 1.0)
+       {
+               projectorColor = texture2D(projectorMap,projectorUV);
+               gl_FragColor = vec4(projectorColor.rgb ,1.0);
+       }else
+       {
+               gl_FragColor = vec4(1.0,0.0,1.0,1.0);
+       }
+      }
+
+</script>
+
+
+<div id="WebGL-output"></div>
+
+<script>
+    var camera, scene, renderer, control,cameraMap;
+
+    function init() {
+
+        var uniforms;
+
+        scene = new THREE.Scene();
+
+        renderer = new THREE.WebGLRenderer();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 40;
+        camera.position.y = 10;
+        console.log(camera.matrixWorld);
+
+        control = new THREE.OrbitControls(camera);
+
+        cameraMap= new THREE.PerspectiveCamera(90, 1, 0.1, 1000);
+        //cameraMap.position.z = 40;
+       // cameraMap.position.y = 10;
+        console.log(cameraMap.matrixWorld);
+
+       // cameraMap.position.setZ(20);
+
+        document.onmousedown = function (ev) {
+
+            console.log("mousedown");
+            cameraMap.rotation.x += Math.PI/2;
+          //  cameraMap.position.x +=1;
+            cameraMap.updateMatrixWorld();                                                                                 // updateMatrixWorld() 方法
+           // console.log(cameraMap.matrixWorldInverse);
+
+        }
+
+        // cameraMap.position.z = 20;
+
+        scene.add(new THREE.CameraHelper(cameraMap));
+
+
+
+        uniforms = {
+
+            projectorMap: {value: (new THREE.TextureLoader()).load("./test1.jpg")},
+            projectorMatrix: {value: cameraMap.projectionMatrix},
+            projectorViewMatrix: {value: cameraMap.matrixWorldInverse}
+
+        };
+
+        var shaderMaterial = new THREE.ShaderMaterial(
+            {
+               // side: THREE.BackSide,
+               // side:THREE.DoubleSide,
+                uniforms: uniforms,
+                vertexShader: document.getElementById('vertexshader').textContent,
+                fragmentShader: document.getElementById(('fragmentshader')).textContent,
+                depthTest: false
+                //transparent: true
+
+            });
+
+        /* new THREE.TextureLoader().load("./test1.jpg",function(texture){
+             shaderMaterial.uniforms.projectorMap.value = texture
+         })*/
+
+        var cubeGeo = new THREE.CubeGeometry(10, 10, 10);
+
+        var cube = new THREE.Mesh(cubeGeo, shaderMaterial);
+
+       // cube.rotateX(Math.PI/2);
+
+
+        /*          var cube_matrix = cube.matrix;
+                  var cube_matrixWorld = cube.matrixWorld;
+                  var cube_modelViewMatrix = cube.modelViewMatrix;
+
+                  var camera_projectionMatrix = camera.projectionMatrix;
+
+                  var camera_modelViewMatrix = camera.modelViewMatrix;
+                  var camera_matrixWorld = camera.matrixWorld;
+                  var camera_matrixWorldInvverse = camera.matrixWorldInverse;*/
+
+        scene.add(cube);
+
+        document.getElementById('WebGL-output').appendChild(renderer.domElement);
+        animate();
+    }
+
+    function rend() {
+        control.update();
+        renderer.render(scene, camera);
+    }
+
+    function animate() {
+        rend();
+        requestAnimationFrame(animate);
+    }
+
+    init();
+</script>
+
+</body>
+</html>

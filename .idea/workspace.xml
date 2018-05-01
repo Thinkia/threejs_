@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test4- glsl/Material_Shader.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test4- glsl/test1.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/VT-Test/general-test.html" afterPath="$PROJECT_DIR$/VT-Test/general-test.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="general-test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="general-test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="973" column="0" lean-forward="true" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
+            <state relative-caret-position="419">
+              <caret line="957" column="0" lean-forward="true" selection-start-line="957" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
               <folding>
                 <element signature="e#3437#3702#0" expanded="false" />
                 <element signature="e#3770#5304#0" expanded="false" />
@@ -31,17 +32,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_001_4_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_4_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="Material_Shader.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test4- glsl/Material_Shader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_001_5_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_5_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="ajax_test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -133,9 +140,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="508" />
-    <option name="y" value="66" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="357" />
+    <option name="y" value="60" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -175,34 +182,18 @@
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="test4- glsl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
               <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="1k" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="2k" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="512" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,6 +215,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Apple\Desktop\4.27\threejs_\test\test4- glsl" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\loaders" />
@@ -242,26 +234,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.general-test.html">
-    <configuration name="P14-1.6.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P14-1.6.html" />
+  <component name="RunManager" selected="JavaScript Debug.Material_Shader.html">
+    <configuration name="Material_Shader.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test4- glsl/Material_Shader.html" />
     <configuration name="P18-1.7.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P18-1.7.html" />
     <configuration name="P19-1.8.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P19-1.8.html" />
     <configuration name="ajax_test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/VT-Test/ajax_test.html" />
     <configuration name="general-test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/VT-Test/general-test.html" />
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.ajax_test.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.ajax_test.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.ajax_test.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.P14-1.6.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.ajax_test.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
       </list>
     </recent_temporary>
   </component>
@@ -290,17 +282,20 @@
       <workItem from="1523925958183" duration="29443000" />
       <workItem from="1524013384277" duration="25017000" />
       <workItem from="1524799981605" duration="243000" />
-      <workItem from="1524800258255" duration="791000" />
+      <workItem from="1524800258255" duration="1361000" />
+      <workItem from="1524894107624" duration="8000" />
+      <workItem from="1525144844923" duration="189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167747000" />
+    <option name="totallyTimeSpent" value="168514000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="357" y="60" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15995647" sideWeight="0.28029504" order="7" side_tool="true" content_ui="tabs" />
@@ -351,13 +346,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P22-1.9.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/FBX/animationmixer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -601,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/TypedArrayUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3401">
@@ -674,15 +655,31 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="973" column="0" lean-forward="true" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
+        <state relative-caret-position="419">
+          <caret line="957" column="0" lean-forward="true" selection-start-line="957" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
           <folding>
             <element signature="e#3437#3702#0" expanded="false" />
             <element signature="e#3770#5304#0" expanded="false" />
             <element signature="e#39619#39919#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test4- glsl/Material_Shader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
