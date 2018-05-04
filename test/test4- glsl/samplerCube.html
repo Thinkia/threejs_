@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纹理投影测试</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<script src="../../main/three.js"></script>
+<script type="text/javascript" src="../../lib/js/controls/OrbitControls.js"></script>
+<script type="x-shader/x-vertex" id="vertexshader">
+
+        varying vec3 pos;
+
+        void main(void){
+
+        mat4 mvp = projectionMatrix * modelViewMatrix ;
+
+        pos = position.xyz;
+
+       // pos = vec3(-position.x,position.yz);
+
+        gl_Position  = mvp * vec4(pos,1.0);
+
+        }
+
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentshader">
+
+
+        varying vec3 pos;
+
+        uniform samplerCube U_MainTexture;
+
+        void main(void){
+
+            gl_FragColor = textureCube(U_MainTexture,pos);//取观察点到面 的向量
+
+      }
+
+</script>
+
+
+<div id="WebGL-output"></div>
+
+<script>
+    var camera, scene, renderer, control;
+
+    function init() {
+
+        var uniforms;
+
+        scene = new THREE.Scene();
+
+        renderer = new THREE.WebGLRenderer();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 40;
+        camera.position.y = 10;
+
+
+        control = new THREE.OrbitControls(camera);
+
+        var cubeGeo = new THREE.CubeGeometry(10, 10, 10);
+
+        var path = "./";
+        var format = '.jpg';
+        var urls = [
+            path + 'Pannorama_001_3_low' + format, path + 'Pannorama_001_5_low' + format,
+            path + 'Pannorama_001_1_low' + format, path + 'Pannorama_001_6_low' + format,
+            path + 'Pannorama_001_2_low' + format, path + 'Pannorama_001_4_low' + format
+        ];
+
+        uniforms = {
+            U_MainTexture:{ value :  new THREE.CubeTextureLoader().load( urls )  }
+        };
+        var shaderMaterial = new THREE.ShaderMaterial(
+            {
+                side: THREE.BackSide,
+                 // side:THREE.DoubleSide,
+                uniforms: uniforms,
+                vertexShader: document.getElementById('vertexshader').textContent,
+                fragmentShader: document.getElementById(('fragmentshader')).textContent,
+                depthTest: false
+                //transparent: true
+
+            });
+
+
+        var cube = new THREE.Mesh(cubeGeo, shaderMaterial);
+      //  cube.rotation.y = -Math.PI;
+
+        cube.scale.x = -1;
+        scene.add(cube);
+
+        document.getElementById('WebGL-output').appendChild(renderer.domElement);
+        animate();
+    }
+
+    function rend() {
+        control.update();
+        renderer.render(scene, camera);
+    }
+
+    function animate() {
+        rend();
+        requestAnimationFrame(animate);
+    }
+
+    init();
+</script>
+
+</body>
+</html>
