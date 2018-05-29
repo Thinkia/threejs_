@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="500px" width="500px"  >
+    <line  x1="0" y1="500" x2="0" y2="0" style="stroke:rgb(0,0,0);stroke-width:5"    />
+    <line  x1="500" y1="0" x2="0" y2="0" style="stroke:rgb(0,0,0);stroke-width:5"    />
+    <line  x1="0" y1="500" x2="500" y2="500" style="stroke:rgb(0,0,0);stroke-width:5"    />
+    <line  x1="500" y1="0" x2="500" y2="500" style="stroke:rgb(0,0,0);stroke-width:5"    />
+
+
+
+
+    <line id="line" x1="250" y1="150" x2="250" y2="250" style="stroke:rgb(255,0,0);stroke-width:5"    />
+
+    <circle   id="circle" cx="250" cy="250" r="10" stroke="black" stroke-width="2" fill="red" />
+</svg>
+<br>
+
+<p>现在圆心x坐标是: {{ cx }} </p><input type="text" placeholder="圆心y坐标" v-model="cx">
+<p>现在圆心y坐标是: {{ cy }}  </p><input   placeholder="指向x坐标"  v-model="cy">
+
+
+    <br><br><br>
+<p>现在方向x是: {{ dx }}  </p><input type="text" placeholder="方向x" v-model="dx">
+    <p>现在方向x是: {{ dy }}  </p><input type="text" placeholder="方向y" v-model="dy">
+
+</div>
+
+
+<script type = "text/javascript" >
+
+    var oldCx,newCx,oldCy,newCy;
+    var oldDx,oldDy,newDx,newDy;
+
+   var vue =new Vue({
+        el: '#app',
+        data: {
+            cx: '250',
+            cy: '250',
+            dx: '250',
+            dy: '150'
+        },
+       watch:{
+            cx:function(val)
+            {
+                this.cx = val;
+            },
+           cy:function(val)
+           {
+               this.cy = val;
+           },
+           dx:function(val)
+           {
+               this.dx = val;
+           },
+           dy:function(val)
+           {
+               this.dy = val;
+           }
+
+       }
+    })
+
+   vue.$watch('cx',function (newValue,oldValue) {
+
+       newCx = newValue;
+       oldCx = oldValue;
+       console.log(newValue);
+       var  circle = document.getElementById('circle');
+       circle.setAttribute('cx',newCx);
+       var  line = document.getElementById('line');
+       line.setAttribute('x2',newCx);
+
+   })
+    vue.$watch('cy',function (newValue,oldValue) {
+
+        newCy = newValue;
+        oldCy = oldValue;
+        console.log(newValue);
+        var  circle = document.getElementById('circle');
+        circle.setAttribute('cy',newCy);
+        var  line = document.getElementById('line');
+        line.setAttribute('y2',newCy);
+    })
+    vue.$watch('dy',function (newValue,oldValue) {
+        newDy = newValue;
+        oldDy = oldValue;
+        console.log(newValue);
+        var  line = document.getElementById('line');
+        line.setAttribute('y1',newDy);
+    })
+    vue.$watch('dx',function (newValue,oldValue) {
+        newDx = newValue;
+        oldDx = oldValue;
+        console.log(newValue);
+        var  line = document.getElementById('line');
+        line.setAttribute('x1',newDx);
+    })
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
