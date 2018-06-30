@@ -29,7 +29,7 @@
 
             var VIEW_ANGLE = 45;
             var ASPECT = WIDTH/HEIGHT;
-            var NEAR = 1;
+            var NEAR = 0.1;
             var FAR = 500;
 
             var camera,scene,renderer;
@@ -37,6 +37,18 @@
             var cameraControls;
 
             var sphereGroup,smallSphere;
+
+            var p_front   = new THREE.Vector3(0,0,-1);
+
+            var p_top     = new THREE.Vector3(0,1,0);
+
+            var p_behind  = new THREE.Vector3(0,0,1);
+
+            var p_bottom  = new THREE.Vector3(0,-1,0);
+
+            var p_left    = new THREE.Vector3(-1,0,0);
+
+            var p_right   =  new THREE.Vector3(1,0,0);
 
             init();
 
@@ -56,13 +68,16 @@
 
                     //camera
                     camera = new THREE.PerspectiveCamera(VIEW_ANGLE,ASPECT,NEAR,FAR);
-                    camera.position.set(0,75,160);
+                    camera.position.set(0,50,0);
 
-                    //
+                var axes = new THREE.AxesHelper(20);
+                scene.add(axes);
+
+                //
                     cameraControls = new THREE.OrbitControls(camera,renderer.domElement);
-                    cameraControls.target.set(0,40,0);
-                    cameraControls.maxDistance = 400;
-                    cameraControls.minDistance = 10;
+                    cameraControls.target.set(0,50,0);
+                    //cameraControls.maxDistance = 400;
+                   // cameraControls.minDistance = 10;
                     cameraControls.update();
 
 
@@ -84,9 +99,9 @@
 
                     groundMirror.position.y = 0.5;
                     groundMirror.rotateX(- Math.PI/2);
-                    scene.add(groundMirror);
+                  //  scene.add(groundMirror);
 
-                    var geometry = new THREE.PlaneBufferGeometry(100,100);
+                    var geometry = new THREE.PlaneBufferGeometry(10,10);
                     var verticalMirror = new THREE.Refractor(geometry,{
                         clipBias: 0.003,
                         textureWidth : WIDTH * window.devicePixelRatio,
@@ -98,10 +113,15 @@
 
                     verticalMirror.position.y = 50;
                     verticalMirror.position.x = -50;
-                    scene.add( verticalMirror);
+                    //scene.add( verticalMirror);
 
                    sphereGroup = new THREE.Object3D();
-                   scene.add(sphereGroup);
+
+
+                var gridHelper = new THREE.GridHelper(10,20);
+                scene.add(gridHelper);                                                                                          //地面辅助工具
+
+                //    scene.add(sphereGroup);
                 /*
                                    var geometry = new THREE.CylinderGeometry(0.1,15*Math.cos(Math.PI/180*30),0.1,24,1);
                                    var material = new THREE.MeshPhongMaterial({color:0xffffff,emissive:0x666666});
@@ -176,7 +196,9 @@
                   planeLeft.rotateY(Math.PI/2);
                   scene.add(planeLeft);
 
-                  //lights
+
+
+                //lights
                   var mainLight = new THREE.PointLight(0xcccccc,1.5,250);
                   mainLight.position.y = 60;
                   scene.add( mainLight );
@@ -193,31 +215,80 @@
                    redLight.position.set(-550,50,0);
 
 
+
+                   /* document.onmouseup =function (ev) {
+                    scene.children[3].material.map = new THREE.ImageUtils.loadTexture("./textures2/negx.jpg");
+                    console.log(scene.children[3].material.map);
+           }*/
+
+                   document.onmousemove = function () {
+
+                      // console.log(camera.position)
+
+                   }
+
+                   document.onmouseup = function (ev) {
+
+                       var changePlan = new Array();
+
+                       changePlan[0] = "Thinkia";
+                       var num =0.4;
+
+                       console.log('需要替换的平面有：');
+
+                       if(mathCos(camera.getWorldDirection(),p_top)>num)
+                       {
+                           console.log(mathCos(camera.getWorldDirection(),p_top)+"----top")
+                           changePlan[changePlan.length] ='top' ;
+                       }
+                       if(mathCos(camera.getWorldDirection(),p_right)>num)
+                       {
+                           console.log(mathCos(camera.getWorldDirection(),p_right)+'----right');
+                           changePlan[changePlan.length] ='right' ;
+                       }
+                       if(mathCos(camera.getWorldDirection(),p_left)>num) {
+                           console.log(mathCos(camera.getWorldDirection(), p_left)+'----left');
+                           changePlan[changePlan.length] ='left' ;
+                       }
+                       if(mathCos(camera.getWorldDirection(),p_behind)>num)
+
+                       {
+                           console.log(mathCos(camera.getWorldDirection(),p_behind)+'----behind');
+                           changePlan[changePlan.length] ='behind' ;
+                       }
+
+                       if(mathCos(camera.getWorldDirection(),p_bottom)>num) {
+                           console.log(mathCos(camera.getWorldDirection(), p_bottom)+'----bottom');
+                           changePlan[changePlan.length] ='bottom' ;
+                       }
+                       if(mathCos(camera.getWorldDirection(),p_front)>num)
+
+                       {
+                           console.log(mathCos(camera.getWorldDirection(),p_front)+'----front');
+                           changePlan[changePlan.length] ='front' ;
+                       }
+
+                console.log(changePlan);
+
+                   }
+
+
+
+            }
+
+            function mathCos(v1,v2){
+
+                return  (v1.x*v2.x+v1.y*v2.y+v1.z*v2.z)/(Math.sqrt(  (v1.x*v1.x+v1.y*v1.y+v1.z*v1.z) * (v2.x*v2.x+v2.y*v2.y+v2.z*v2.z)))
+
             }
 
             function animate() {
+
                 requestAnimationFrame(animate);
-
-                var timer = Date.now() * 0.01;
-
-                sphereGroup.rotation.y -=0.0002;
-
-                smallSphere.position.set(
-                  Math.cos(timer * 0.1)*30,
-                  Math.abs(Math.cos(timer * 0.2))*20+5,
-                  Math.sin(timer*0.1)*30
-
-                );
-
-                smallSphere.rotation.y = ( Math.PI/2) - timer* 0.1;
-                smallSphere.rotation.z = timer * 0.8;
 
                 renderer.render(scene, camera);
 
-
             }
-
-
 
         </script>
 
