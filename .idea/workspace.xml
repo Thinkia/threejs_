@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_1_00.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_2_00.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_3_00.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_4_00.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_5_00.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_6_00.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Material_Shader.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_1_low.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_2_low.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_3_low.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_4_low.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_5_low.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_6_low.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/samplerCube.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/readme.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,16 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="general-test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="957" column="0" lean-forward="false" selection-start-line="957" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="svg-test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VT-Test/svg-test.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,12 +87,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="samplerCube.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="samplerCube.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test5-projectorMatrix/samplerCube.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-3595">
               <caret line="85" column="39" lean-forward="false" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="39" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test5-projectorMatrix/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="54">
+                <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -161,6 +151,7 @@
         <option value="$PROJECT_DIR$/VT-Test/ajax_test.html" />
         <option value="$PROJECT_DIR$/VT-Test/general-test.html" />
         <option value="$PROJECT_DIR$/test/test2- uv/shaderMaterial.html" />
+        <option value="$PROJECT_DIR$/test/test5-projectorMatrix/readme.md" />
       </list>
     </option>
   </component>
@@ -322,15 +313,16 @@
       <workItem from="1524800258255" duration="1361000" />
       <workItem from="1524894107624" duration="8000" />
       <workItem from="1525144844923" duration="189000" />
-      <workItem from="1557024836039" duration="1098000" />
+      <workItem from="1557024836039" duration="1588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169612000" />
+    <option name="totallyTimeSpent" value="170102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -383,13 +375,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/josdirksen/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="51" lean-forward="true" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P19-1.8.css" />
     <entry file="file://$PROJECT_DIR$/lib/js/libs/dat.gui.min.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -726,6 +711,17 @@
         <state relative-caret-position="-3595">
           <caret line="85" column="39" lean-forward="false" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test5-projectorMatrix/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="54">
+            <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
