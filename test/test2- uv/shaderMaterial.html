@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shaderMaterial</title>
+
+    <script src ="../../main/three.js" ></script>
+    <script src ="../../lib/js/controls/OrbitControls.js"></script>
+
+</head>
+<body>
+
+    <script>
+
+        var renderer = new THREE.WebGLRenderer({
+            antialias:true
+        });
+
+        renderer.setSize(window.innerWidth,window.innerHeight);
+
+        document.body.appendChild(renderer.domElement);
+
+        var scene = new THREE.Scene();
+
+        var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,1,1000);
+
+        camera.position.set(0,0,1);
+
+        scene.add(camera);
+
+        var cube = new THREE.BoxBufferGeometry(200,200,200);
+
+        // shaderMaterial             vertexShader,fragmentShader,uniforms ;
+
+        var material = new THREE.ShaderMaterial({
+
+            side:THREE.BackSide,
+            transparent:true,
+            vertexShader:this.createVertexShader(),
+            fragmentShader:createFragmentShader(),
+            uniforms:{
+                projectToggle:{value:true},
+                alphaValueA:{value:0.5},
+                alphaValueB:{value:0.5},
+                projectorCubeA:{value:createCubeTexture()},
+                projectorCubeB:{value:createCubeTexture()},
+                panoramaPositionA:{value:new THREE.Vector3(0,0,0)},
+                panoramaPositionB:{value:new THREE.Vector3(0,0,0)},
+                panoramaAIndex:{value:-1},
+                panoramaBIndex:{value:-1}
+            }
+        })
+
+
+        var controls = new THREE.OrbitControls(camera);
+
+        controls.rotateSpeed = -1;
+
+        var mesh = new THREE.Mesh(cube,material);
+
+        scene.add(mesh);
+
+        animate();
+
+        // todo  顶点着色
+        function createVertexShader(){
+            return [
+                'varying vec3 fragPosition;',
+                'void main(){',
+                'gl_Position = projectionMatrix * modelViewMatrix * vec4( position , 1.0);',
+                'fragPosition = position.xyz;',
+                '}'
+            ].join('\n')
+        }
+
+        // todo  片原着色
+        function createFragmentShader(){
+            return [
+                'uniform samplerCube projectorCubeA;',
+                'uniform float alphaValueA;',
+                'uniform vec3 panoramaPositionA;',
+                'uniform samplerCube projectorCubeB;',
+                'uniform float alphaValueB;',
+                'uniform vec3 panoramaPositionB;',
+                'varying vec3 fragPosition;',
+                'uniform bool projectToggle;',
+                'vec4 getProjectorMapAColor(){',
+                'vec4 color = vec4(0.0);',
+                'vec3 uvPosition = fragPosition - panoramaPositionA;',
+                'color = textureCube( projectorCubeA,uvPosition);',
+                'return color;',
+                '}',
+                'vec4 getProjectorMapBColor(){',
+                'vec4 color = vec4(0.0);',
+                'vec3 uvPosition = fragPosition - panoramaPositionB;',
+                'color = textureCube(projectorCubeB,uvPosition);',
+                'return color;',
+                '}',
+                'void main(){',
+                'if(projectToggle){',
+                'vec4 projectorColorA = vec4(0.0);',
+                'vec4 projectorColorB = vec4(0.0);',
+                'projectorColorA = getProjectorMapAColor();',
+                'projectorColorB = getProjectorMapBColor();',
+                'gl_FragColor = vec4(projectorColorA.rgb * alphaValueA + projectorColorB.rgb * alphaValueB,1.0);',
+                '}else{',
+                'gl_FragColor = vec4(0.0);',
+                '}',
+                '}'
+            ].join('\n')
+        }
+
+        // todo cube纹理
+        function createCubeTexture(){
+
+            var loader = new THREE.CubeTextureLoader();
+
+            loader.setPath('textures/');
+
+            var cubeTexture = loader.load([
+                'posx.jpg','negx.jpg',
+                'posy.jpg','negy.jpg',
+                'posz.jpg','negz.jpg'
+            ])
+
+            return cubeTexture;
+        }
+
+
+        function rend(){
+
+            controls.update();
+            renderer.render(scene,camera);
+        }
+
+        function animate(){
+            rend();
+            requestAnimationFrame(animate);
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>
