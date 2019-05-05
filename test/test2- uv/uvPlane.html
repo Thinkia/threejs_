@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uv - test</title>
+
+    <style>
+
+        body{
+            margin:0;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body >
+
+<script src ="../../main/three.js" ></script>
+<script src ="../../lib/js/controls/OrbitControls.js"></script>
+
+<script >
+    // create renderer
+    var renderer = new THREE.WebGLRenderer({antialias:true});
+    // set color    60/s
+   // renderer.setClearColor(new THREE.Color(0xff00ff,1.0));
+    // set  shadowMap
+    // renderer.shadowMapEnabled = true;
+    //  webgl  element  2   body
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // create scene
+    var scene = new THREE.Scene();
+
+    // create PerspectiveCamera
+    var camera = new THREE.PerspectiveCamera(50,window.innerWidth/window.innerHeight,0.1,10000);
+
+    // camera  position
+    camera.position.set(1000,1000,1000);
+
+    // add camera
+
+    scene.add(camera);
+
+    var   cube = new THREE.PlaneBufferGeometry(1000,1000,2,2);
+
+
+    // 平面大小   平面分数
+    var faceSize = 1000;
+    var level = 1;
+    // 单个plane的uv坐标，对应整幅图片
+    var planeUV = [
+        0, 1,
+        0, 0,
+        1, 1,
+        0, 0,
+        1, 0,
+        1, 1
+    ];
+    // 顶点坐标
+    var position = [];
+    // 整个平面的 UV 坐标，对应多张图片
+    var faceUV = [];
+    // 顶点顺序
+    var index = [];
+
+    // 行总数
+    var rowCount = Math.pow(2,level);
+    // 列总数
+    var colCount = rowCount;
+    // 单张图片对应的平面大小
+
+    var planeSize = faceSize / rowCount;
+
+    // 单个 face 的平面总数
+    var planeCount = Math.pow(4, level);
+    // 计算每个平面的左上角顶点，然后算出每个面的坐标
+    for (var i = 0 ; i < planeCount ; i++) {
+
+        var row = parseInt(i / colCount);
+        var col = i % rowCount;
+
+        // 左上角顶点坐标
+        var vx = (col - colCount / 2) * planeSize;
+        var vy = (rowCount / 2 - row) * planeSize;
+        var vz = 0;
+
+        // 添加整个平面的坐标，6个点组成
+        position.push(vx)
+        position.push(vy)
+        position.push(vz)
+
+        position.push(vx)
+        position.push(vy - planeSize)
+        position.push(vz)
+
+        position.push(vx + planeSize)
+        position.push(vy)
+        position.push(vz)
+
+        position.push(vx)
+        position.push(vy - planeSize)
+        position.push(vz)
+
+        position.push(vx + planeSize)
+        position.push(vy - planeSize)
+        position.push(vz)
+
+        position.push(vx + planeSize)
+        position.push(vy)
+        position.push(vz)
+
+        // 设置顶点的渲染顺序
+        index.push(
+            index.length,
+            index.length+1,
+            index.length+2,
+            index.length+3,
+            index.length+4,
+            index.length+5
+        )
+        // 设置整个face的uv坐标
+        faceUV = faceUV.concat(planeUV)
+    }
+
+    cube.addGroup(0,6,0)
+    cube.addGroup(6,6,1)
+    cube.addGroup(12,6,2)
+    cube.addGroup(18,6,3)
+    cube.setIndex(new THREE.Uint16BufferAttribute(index,1));
+    cube.addAttribute('uv', new THREE.Float32BufferAttribute(faceUV,2));
+    cube.addAttribute('position', new THREE.Float32BufferAttribute(position,3));
+
+  //  cube.setDrawRange(0,12);
+
+    var materials = [];
+
+    var loader = new THREE.TextureLoader()
+
+    var material = new THREE.MeshBasicMaterial({
+        map: loader.load('./textures/ash_01.jpg'),
+        //side:THREE.DoubleSide,
+    });
+
+    var material2 = new THREE.MeshBasicMaterial({
+        map:loader.load('./textures/negx.jpg')
+    })
+    var material3 = new THREE.MeshBasicMaterial({
+        map: loader.load('./textures/test.jpg')
+    })
+    var material4 = new THREE.MeshBasicMaterial({
+        map: loader.load('./textures/test1.jpg')
+    })
+
+    materials.push(material);
+    materials.push(material2);
+    materials.push(material3);
+    materials.push(material4);
+
+
+    mesh =  new THREE.Mesh(cube,materials);
+    scene.add(mesh);
+
+    mesh.lookAt(camera.position)
+
+
+    var orbitCtl = new THREE.OrbitControls(camera);
+
+ //   orbitCtl.autoRotate = false ;
+
+    var clock = new THREE.Clock();
+
+    function threeStart()
+    {
+
+        var delta = clock.getDelta();
+        orbitCtl.update(delta);
+        renderer.clear();
+        renderer.render(scene,camera);
+        requestAnimationFrame(threeStart);
+    }
+
+    threeStart();
+</script>
+
+
+
+</body>
+</html>

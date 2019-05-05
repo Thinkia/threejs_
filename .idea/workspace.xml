@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test4- glsl/Material_Shader.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test4- glsl/test1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/textures/negx.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/textures/negy.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/textures/negz.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/textures/posx.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/textures/posy.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/textures/posz.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/textures/test.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/textures/test1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test2- uv/uvPlane.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,21 +29,17 @@
         <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="419">
-              <caret line="957" column="0" lean-forward="true" selection-start-line="957" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
-              <folding>
-                <element signature="e#3437#3702#0" expanded="false" />
-                <element signature="e#3770#5304#0" expanded="false" />
-                <element signature="e#39619#39919#0" expanded="false" />
-              </folding>
+              <caret line="957" column="0" lean-forward="false" selection-start-line="957" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Material_Shader.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test4- glsl/Material_Shader.html">
+      <file leaf-file-name="svg-test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VT-Test/svg-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -45,59 +48,80 @@
       <file leaf-file-name="ajax_test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="270">
               <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_001_6_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_001_6_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="plane-panorama.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test1-panorama/plane-panorama.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5539">
+              <caret line="77" column="54" lean-forward="false" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_002_1_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_1_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test2- uv/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3321">
+              <caret line="123" column="51" lean-forward="false" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_002_2_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_2_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="uvPlane.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test2- uv/uvPlane.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_002_3_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_3_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="uv-mapping.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test2- uv/uv-mapping.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_002_4_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_4_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="cube_mapping.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test1-panorama/cube_mapping.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1782">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_002_5_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_5_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="cube_panorama.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test1-panorama/cube_panorama.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pannorama_002_6_high.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VT-Test/src/2k/Pannorama_002_6_high.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test1-panorama/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5633">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -140,9 +164,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="357" />
-    <option name="y" value="60" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -161,6 +185,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,18 +197,26 @@
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
-              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="test1-panorama" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="test2- uv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="test2- uv" type="462c0819:PsiDirectoryNode" />
+              <item name="textures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
@@ -199,8 +233,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,11 +247,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lsc\Desktop\5.5\threejs_\test\test2- uv\textures" />
+      <recent name="C:\Users\lsc\Desktop\5.5\threejs_\test\test2- uv" />
       <recent name="C:\Users\Apple\Desktop\4.27\threejs_\test\test4- glsl" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
-      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\loaders" />
-      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\VT-Test\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,26 +266,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Material_Shader.html">
+  <component name="RunManager" selected="JavaScript Debug.uvPlane.html">
     <configuration name="Material_Shader.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test4- glsl/Material_Shader.html" />
-    <configuration name="P18-1.7.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P18-1.7.html" />
-    <configuration name="P19-1.8.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/josdirksen/chapter-01/P19-1.8.html" />
-    <configuration name="ajax_test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/VT-Test/ajax_test.html" />
     <configuration name="general-test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/VT-Test/general-test.html" />
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test2- uv/index.html" />
+    <configuration name="uv-mapping.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test2- uv/uv-mapping.html" />
+    <configuration name="uvPlane.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test2- uv/uvPlane.html" />
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.ajax_test.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.uv-mapping.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.uvPlane.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.ajax_test.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.P19-1.8.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.P18-1.7.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.uvPlane.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.uv-mapping.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.general-test.html" />
       </list>
     </recent_temporary>
   </component>
@@ -285,14 +317,15 @@
       <workItem from="1524800258255" duration="1361000" />
       <workItem from="1524894107624" duration="8000" />
       <workItem from="1525144844923" duration="189000" />
+      <workItem from="1557024836039" duration="312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168514000" />
+    <option name="totallyTimeSpent" value="168826000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="357" y="60" width="1936" height="1056" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -302,7 +335,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11860718" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2883569" sideWeight="0.7197049" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -346,62 +379,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/FBX/animationmixer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="69" column="35" lean-forward="true" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P10-1.5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/chapter-01/P14-1.6.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -413,13 +390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test1-panorama/plane-panorama.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="77" column="67" lean-forward="true" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -582,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test1-panorama/canvas_panorama.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/js/TypedArrayUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3401">
@@ -655,10 +618,50 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
+    <entry file="file://$PROJECT_DIR$/test/test4- glsl/Material_Shader.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="437">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/demo-svg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test1-panorama/canvas_panorama.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5512">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test1-panorama/cube_mapping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1782">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test1-panorama/cube_panorama.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test1-panorama/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5633">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -666,19 +669,55 @@
     <entry file="file://$PROJECT_DIR$/VT-Test/general-test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
-          <caret line="957" column="0" lean-forward="true" selection-start-line="957" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
-          <folding>
-            <element signature="e#3437#3702#0" expanded="false" />
-            <element signature="e#3770#5304#0" expanded="false" />
-            <element signature="e#39619#39919#0" expanded="false" />
-          </folding>
+          <caret line="957" column="0" lean-forward="false" selection-start-line="957" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test4- glsl/Material_Shader.html">
+    <entry file="file://$PROJECT_DIR$/VT-Test/svg-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VT-Test/ajax_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test1-panorama/plane-panorama.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5539">
+          <caret line="77" column="54" lean-forward="false" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test2- uv/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3321">
+          <caret line="123" column="51" lean-forward="false" selection-start-line="123" selection-start-column="51" selection-end-line="123" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test2- uv/uv-mapping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test2- uv/uvPlane.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding />
         </state>
       </provider>
