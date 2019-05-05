@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纹理投影测试</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<script src="../../main/three.js"></script>
+<script type="text/javascript" src="../../lib/js/controls/OrbitControls.js"></script>
+<script type="x-shader/x-vertex" id="vertexshader">
+        varying vec3 pos;
+
+        void main(void){
+
+        mat4 mvp = projectionMatrix * modelViewMatrix ;
+
+        pos = position.xyz;
+
+       // pos = vec3(-position.x,position.yz);
+
+        gl_Position  = mvp * vec4(pos,1.0);
+
+        }
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentshader">
+
+
+        varying vec3 pos;
+
+        uniform vec3 getPV;
+
+        uniform samplerCube U_MainTexture;
+
+        void main(void){
+
+            gl_FragColor = textureCube(U_MainTexture,pos-getPV);//取观察点到面 的向量
+
+      }
+
+</script>
+
+
+<div id="WebGL-output"></div>
+
+<canvas id="cv0" width="512px" height="512px"></canvas>
+<canvas id="cv1" width="512px" height="512px"></canvas>
+<canvas id="cv2" width="512px" height="512px"></canvas>
+<canvas id="cv3" width="512px" height="512px"></canvas>
+<canvas id="cv4" width="512px" height="512px"></canvas>
+<canvas id="cv5" width="512px" height="512px"></canvas>
+
+<script>
+    var camera, scene, renderer, control;
+
+    var uniforms;
+
+    function init() {
+
+
+        scene = new THREE.Scene();
+
+        renderer = new THREE.WebGLRenderer();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 40;
+        camera.position.y = 10;
+
+
+        control = new THREE.OrbitControls(camera);
+
+        var cubeGeo = new THREE.CubeGeometry(10, 10, 10);
+
+        var path = "./";
+        var format = '.jpg';
+        var urls = [
+            path + 'Pannorama_001_3_low' + format,
+            path + 'Pannorama_001_5_low' + format,
+            path + 'Pannorama_001_1_low' + format,
+            path + 'Pannorama_001_6_low' + format,
+            path + 'Pannorama_001_2_low' + format,
+            path + 'Pannorama_001_4_low' + format
+        ];
+
+      var canvasAry = new Array();
+
+    //  var img = new Array();
+/*
+        var image1 = new Image();
+        canvasAry[0]=document.getElementById("cv0");
+        var ctx1 = canvasAry[0].getContext("2d");
+        image1.onload = function(){
+
+            ctx1.save();
+            var xpos = canvasAry[0].width/2;
+            var ypos = canvasAry[0].height/2;
+            ctx1.translate(xpos, ypos);
+            ctx1.rotate( Math.PI/2);
+            ctx1.translate(-xpos, -ypos);
+            ctx1.drawImage(image1, xpos - image1.width / 2, ypos - image1.height / 2);
+
+            console.log("rotate");
+
+        }
+        image1.src= "Pannorama_001_1_low.jpg";*/
+
+        var textureCube = new THREE.CubeTexture();
+        var count = 0;
+        for(var i= 0 ;i<6;i++)                                                                                           //js  for   闭包处理
+      {
+          (function(i )
+          {
+          canvasAry[i] = document.getElementById("cv"+i);
+          var  ctx1 = canvasAry[i].getContext("2d");
+          var img = new Image();
+          var j = i+1;
+          img.onload = function( ) {
+
+              if(0==i)                                                                                                  //  表示第0张图 加载完             先旋转  后翻转
+              {
+                  var xpos = canvasAry[0].width/2;
+                  var ypos = canvasAry[0].height/2;
+                  ctx1.translate(xpos, ypos);
+                  ctx1.rotate(- Math.PI/2);
+                  ctx1.translate(-xpos, -ypos);
+                  ctx1.drawImage(img, xpos - img.width / 2, ypos - img.height / 2);
+                  ctx1.transform(-1,0,0,1,512,0);
+              }
+              if(3==i)
+              {
+
+                  var xpos = canvasAry[0].width/2;
+                  var ypos = canvasAry[0].height/2;
+                  ctx1.translate(xpos, ypos);
+                  ctx1.rotate( Math.PI);
+                  ctx1.translate(-xpos, -ypos);
+                  ctx1.drawImage(img, xpos - img.width / 2, ypos - img.height / 2);
+                  ctx1.transform(-1,0,0,1,512,0);
+              }
+
+              if(2==i)                                                                                                  //  表示第0张图 加载完             先旋转  后翻转
+              {
+                  var xpos = canvasAry[0].width/2;
+                  var ypos = canvasAry[0].height/2;
+                  ctx1.translate(xpos, ypos);
+                  ctx1.rotate( -Math.PI/2);
+                  ctx1.translate(-xpos, -ypos);
+                  ctx1.drawImage(img, xpos - img.width / 2, ypos - img.height / 2);
+                  ctx1.transform(-1,0,0,1,512,0);
+              }
+              if(4==i)                                                                                                  //  表示第0张图 加载完             先旋转  后翻转
+              {
+                  var xpos = canvasAry[0].width/2;
+                  var ypos = canvasAry[0].height/2;
+                  ctx1.translate(xpos, ypos);
+                  ctx1.rotate( Math.PI/2);
+                  ctx1.translate(-xpos, -ypos);
+                  ctx1.drawImage(img, xpos - img.width / 2, ypos - img.height / 2);
+                 ctx1.transform(-1,0,0,1,512,0);
+              }
+              if(1==i)                                                                                                  //  表示第0张图 加载完             先旋转  后翻转
+              {
+                  var xpos = canvasAry[0].width/2;
+                  var ypos = canvasAry[0].height/2;
+                  ctx1.translate(xpos, ypos);
+                //  ctx1.rotate( -Math.PI/2);
+                  ctx1.translate(-xpos, -ypos);
+                  ctx1.drawImage(img, xpos - img.width / 2, ypos - img.height / 2);
+                  ctx1.transform(-1,0,0,1,512,0);
+              }
+              if(5==i)                                                                                                  //  表示第0张图 加载完             先旋转  后翻转
+              {
+                  var xpos = canvasAry[0].width/2;
+                  var ypos = canvasAry[0].height/2;
+                  ctx1.translate(xpos, ypos);
+                  //  ctx1.rotate( -Math.PI/2);
+                  ctx1.translate(-xpos, -ypos);
+                  ctx1.drawImage(img, xpos - img.width / 2, ypos - img.height / 2);
+                  ctx1.transform(-1,0,0,1,512,0);
+              }
+             // ctx1.transform(-1,0,0,1,512,0);
+              ctx1.drawImage(img, 0, 0,img.width,img.height);
+              console.log(i);
+              //console.log(textureCube);
+             //console.log(canvasAry[count]);
+              count++;
+              if(count>5)
+              {
+                  textureCube.images[0] = canvasAry[4];
+                  textureCube.images[1] = canvasAry[2];
+                  textureCube.images[2] = canvasAry[1];
+                  textureCube.images[3] = canvasAry[3];
+                  textureCube.images[4] = canvasAry[5];
+                  textureCube.images[5] = canvasAry[0];
+                  textureCube.needsUpdate=true;
+
+              }
+          }
+
+          img.src = "512_001_"+j+"_00.jpg";
+        /*  console.log(canvasAry[i]);
+          console.log(img);*/
+          })(i);
+      }
+
+
+       // var ct = new THREE.CubeTexture();
+
+            var mainTexture = new THREE.CubeTextureLoader().load( urls,function () {
+            mainTexture.images[0] = canvasAry[4];
+            mainTexture.images[1] = canvasAry[2];
+            mainTexture.images[2] = canvasAry[0];
+            mainTexture.images[3] = canvasAry[5];
+            mainTexture.images[4] = canvasAry[1];
+            mainTexture.images[5] = canvasAry[3];
+            // mainTexture.needsUpdate;
+            // console.log(mainTexture.images[5]);
+             });
+            console.log(mainTexture);
+
+
+        var mainTexture;
+        mainTexture = textureCube;
+        uniforms = {
+            U_MainTexture:{ value : mainTexture },
+            getPV : {value :  new THREE.Vector3(0,0,0)}
+        };
+        console.log(mainTexture);
+        console.log(textureCube);
+        var shaderMaterial = new THREE.ShaderMaterial(
+            {
+                side: THREE.BackSide,
+                // side:THREE.DoubleSide,
+                uniforms: uniforms,
+                vertexShader: document.getElementById('vertexshader').textContent,
+                fragmentShader: document.getElementById(('fragmentshader')).textContent,
+                depthTest: false
+                //transparent: true
+            });
+
+
+        var cube = new THREE.Mesh(cubeGeo, shaderMaterial);
+       // cube.position.set(10,10,10);
+
+        //  cube.rotation.y = -Math.PI;
+
+         cube.scale.x = -1;
+
+        scene.add(cube);
+
+
+        document.getElementById('WebGL-output').appendChild(renderer.domElement);
+        animate();
+
+
+    }
+
+    function rend() {
+        control.update();
+        renderer.render(scene, camera);
+    }
+
+    function animate() {
+        rend();
+        requestAnimationFrame(animate);
+    }
+
+    init();
+</script>
+
+</body>
+</html>

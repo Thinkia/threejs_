@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f31655-4402-4f40-b770-5fec5fa82188" name="Default" comment="three">
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_1_00.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_2_00.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_3_00.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_4_00.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_5_00.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/512_001_6_00.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Material_Shader.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_1_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_2_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_3_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_4_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_5_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/Pannorama_001_6_low.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test5-projectorMatrix/samplerCube.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test/test2- uv/shaderMaterial.html" afterPath="$PROJECT_DIR$/test/test2- uv/shaderMaterial.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -77,11 +90,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shaderMaterial.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shaderMaterial.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test2- uv/shaderMaterial.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
               <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Material_Shader.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test5-projectorMatrix/Material_Shader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6835">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="samplerCube.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test5-projectorMatrix/samplerCube.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3595">
+              <caret line="85" column="39" lean-forward="false" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -92,26 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cube_panorama.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test1-panorama/cube_panorama.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test1-panorama/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5633">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -213,6 +226,12 @@
             <path>
               <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
               <item name="threejs_" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="test5-projectorMatrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="threejs_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="threejs_" type="462c0819:PsiDirectoryNode" />
               <item name="VT-Test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -233,11 +252,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lsc\Desktop\5.5\threejs_\test\test5-projectorMatrix" />
       <recent name="C:\Users\lsc\Desktop\5.5\threejs_\test\test2- uv" />
       <recent name="C:\Users\lsc\Desktop\5.5\threejs_\test\test2- uv\textures" />
       <recent name="C:\Users\Apple\Desktop\4.27\threejs_\test\test4- glsl" />
       <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js" />
-      <recent name="C:\Users\Apple\Desktop\4.9\threejs_\lib\js\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -252,26 +271,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.uvPlane.html">
-    <configuration name="Material_Shader.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test4- glsl/Material_Shader.html" />
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test2- uv/index.html" />
+  <component name="RunManager" selected="JavaScript Debug.samplerCube.html">
+    <configuration name="Material_Shader.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test5-projectorMatrix/Material_Shader.html" />
+    <configuration name="samplerCube.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test5-projectorMatrix/samplerCube.html" />
     <configuration name="shaderMaterial.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test2- uv/shaderMaterial.html" />
     <configuration name="uv-mapping.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test2- uv/uv-mapping.html" />
     <configuration name="uvPlane.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/threejs_/test/test2- uv/uvPlane.html" />
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.uv-mapping.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.uvPlane.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.shaderMaterial.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.uv-mapping.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.uvPlane.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.shaderMaterial.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html (1)" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.samplerCube.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.uvPlane.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.uv-mapping.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.shaderMaterial.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.samplerCube.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Material_Shader.html (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.uvPlane.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.uv-mapping.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.shaderMaterial.html" />
       </list>
     </recent_temporary>
   </component>
@@ -303,18 +322,17 @@
       <workItem from="1524800258255" duration="1361000" />
       <workItem from="1524894107624" duration="8000" />
       <workItem from="1525144844923" duration="189000" />
-      <workItem from="1557024836039" duration="670000" />
+      <workItem from="1557024836039" duration="1098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169184000" />
+    <option name="totallyTimeSpent" value="169612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16280295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15995647" sideWeight="0.28029504" order="7" side_tool="true" content_ui="tabs" />
@@ -365,20 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/test1-panorama/dynamic-envmap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test1-panorama/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/josdirksen/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -705,6 +709,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test5-projectorMatrix/Material_Shader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6835">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test5-projectorMatrix/samplerCube.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3595">
+          <caret line="85" column="39" lean-forward="false" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="39" />
           <folding />
         </state>
       </provider>
